@@ -150,6 +150,7 @@
     <ClCompile Include="CarpinchoCopado.cpp" />
     <ClCompile Include="Collisionable.cpp" />
     <ClCompile Include="GamePlay.cpp" />
+    <ClCompile Include="Jugadorxs.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Obstaculo.cpp" />
     <ClCompile Include="Personaje.cpp" />
@@ -160,6 +161,7 @@
     <ClInclude Include="CarpinchoCopado.h" />
     <ClInclude Include="Collisionable.h" />
     <ClInclude Include="GamePlay.h" />
+    <ClInclude Include="Jugadorxs.h" />
     <ClInclude Include="Obstaculo.h" />
     <ClInclude Include="Personaje.h" />
     <ClInclude Include="PopUp.h" />

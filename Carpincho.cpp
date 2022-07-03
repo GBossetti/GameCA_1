@@ -9,7 +9,7 @@ Carpincho::Carpincho()
 	_sprite.setOrigin(_sprite.getGlobalBounds().width / 2, _sprite.getGlobalBounds().height / 2);
 }
 
-void Carpincho::updateRandom()
+void Carpincho::update()
 {
 	_sprite.move(_velocity);
 	if (_sprite.getPosition().y > 600) {

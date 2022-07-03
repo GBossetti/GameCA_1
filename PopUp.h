@@ -5,7 +5,7 @@
 
 class PopUp : public sf::Drawable
 {
-private:
+protected:
 	sf::RectangleShape _cuadro;
 	sf::Text _texto, _texto2, _texto3, _texto4;
 	sf::Font _font;

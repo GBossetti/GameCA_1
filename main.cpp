@@ -5,6 +5,7 @@
 #include "Carpincho.h"
 #include "CarpinchoCopado.h"
 #include "GamePlay.h"
+#include "Jugadorxs.h"
 
 int main()
 {
@@ -17,12 +18,12 @@ int main()
     int timer = 60*10; //Tiempo que tarda en volver a aparecer
 
     GamePlay gp;
+    Jugadorxs player;
 
 
     //Points
     int vidas = 3;
     int points = 0;
-
 
 
     //GameLoop
@@ -36,21 +37,25 @@ int main()
                 window.close();
         }
 
-        gp.aceleracion();
-        gp.juego();
-        gp.setTextos();
-        gp.pausa();
-        gp.gameOver();
-        gp.update();
+        if (player.getIngreso() && event.type == sf::Event::TextEntered)
+        {
+            player.cargarNombre(event.text.unicode);
+        }
+
+        player.update();
+
+        //gp.aceleracion();
+        //gp.juego();
+        //gp.setTextos();
+        //gp.pausa();
+        //gp.gameOver();
+        //gp.update();
 
         window.clear();
 
         //Draw
-        window.draw(gp);
-
-        if (timer == 0) {
-            //window.draw(camarada);
-        }
+        //window.draw(gp);
+        window.draw(player);
 
         //Display - Fli
         window.display();

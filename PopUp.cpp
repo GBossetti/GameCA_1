@@ -8,7 +8,7 @@ PopUp::PopUp()
 	_cuadro.setPosition(sf::Vector2f(300, 300));
 	_cuadro.setFillColor(sf::Color::Black);
 
-	// Establecemos fuente y tama�o
+	// Establecemos fuente y tamanio
 	_font.loadFromFile("8bit.ttf");
 
 

@@ -5,6 +5,7 @@
 #include "Carpincho.h"
 #include "CarpinchoCopado.h"
 #include "PopUp.h"
+#include "Jugadorxs.h"
 
 
 class GamePlay: public sf::Drawable

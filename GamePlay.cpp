@@ -10,7 +10,7 @@ GamePlay::GamePlay()
     time_inmunidad = 0;
     juego_pausa = false;
     game_over = false;
-    llegada = false;
+    llegada = true;
 
 
     texture_fondo.loadFromFile("ruta.png");
@@ -31,8 +31,13 @@ void GamePlay::update()
 {
     if (!game_over && !llegada) {
         repartidor.update();
-        carpincho.updateRandom();
+        carpincho.update();
         camarada.update();
+
+        if (camarada.isCollision(carpincho)) {
+            camarada.update();
+        }
+
         if (tiempojugado <= 5) {
             barrera.update();
         }
@@ -41,6 +46,7 @@ void GamePlay::update()
     if (llegada) {
         popup.update();
     }
+
 }
 
 void GamePlay::draw(sf::RenderTarget& target, sf::RenderStates states) const
@@ -67,6 +73,8 @@ void GamePlay::draw(sf::RenderTarget& target, sf::RenderStates states) const
     if (llegada) {
         target.draw(popup, states);
     }
+
+
 }
 
 void GamePlay::aceleracion()
@@ -187,3 +195,5 @@ int GamePlay::getPuntos()
 {
     return points;
 }
+
+

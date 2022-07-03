@@ -10,7 +10,7 @@ private:
 	//sf::Sprite _sprite;
 public:
 	Carpincho();
-	void updateRandom();
+	void update();
 	void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
 	void respawn(); 
 	sf::FloatRect getBounds() const override;
