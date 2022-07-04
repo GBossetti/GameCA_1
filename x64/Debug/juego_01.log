@@ -1,25 +1,21 @@
 ﻿  GamePlay.cpp
-C:\Users\Gonzalo\Documents\GitHub\GameCA\GamePlay.cpp(86,43): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\Gonzalo\Documents\GitHub\GameCA\GamePlay.cpp(93,44): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\Gonzalo\Documents\GitHub\GameCA\GamePlay.cpp(102,23): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\Gonzalo\Documents\GitHub\GameCA\GamePlay.cpp(103,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Gonzalo\Documents\GitHub\GameCA\GamePlay.cpp(109,47): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\Gonzalo\Documents\GitHub\GameCA\GamePlay.cpp(87,43): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Gonzalo\Documents\GitHub\GameCA\GamePlay.cpp(94,44): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Gonzalo\Documents\GitHub\GameCA\GamePlay.cpp(103,23): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Gonzalo\Documents\GitHub\GameCA\GamePlay.cpp(104,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Gonzalo\Documents\GitHub\GameCA\GamePlay.cpp(110,47): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\Gonzalo\Documents\GitHub\GameCA\GamePlay.cpp(110,46): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\Gonzalo\Documents\GitHub\GameCA\GamePlay.cpp(111,46): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\Gonzalo\Documents\GitHub\GameCA\GamePlay.cpp(111,45): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\Gonzalo\Documents\GitHub\GameCA\GamePlay.cpp(112,45): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
           with
           [
               T=float
           ]
-  Jugadorxs.cpp
-C:\Users\Gonzalo\Documents\GitHub\GameCA\Jugadorxs.cpp(62,39): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  main.cpp
-  Generating Code...
   juego_01.vcxproj -> C:\Users\Gonzalo\Documents\GitHub\GameCA\x64\Debug\juego_01.exe

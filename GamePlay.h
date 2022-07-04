@@ -28,6 +28,7 @@ private:
 //	int timer = 60 * 10;
 	int time_inmunidad;
 	bool juego_pausa;
+	bool apreta_pausa;
 	bool game_over;
 	bool llegada;
 

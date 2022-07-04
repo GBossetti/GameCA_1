@@ -40,22 +40,22 @@ int main()
         if (player.getIngreso() && event.type == sf::Event::TextEntered)
         {
             player.cargarNombre(event.text.unicode);
+            player.update();
         }
 
-        player.update();
 
-        //gp.aceleracion();
-        //gp.juego();
-        //gp.setTextos();
-        //gp.pausa();
-        //gp.gameOver();
-        //gp.update();
+        gp.aceleracion();
+        gp.juego();
+        gp.setTextos();
+        gp.pausa();
+        gp.gameOver();
+        gp.update();
 
         window.clear();
 
         //Draw
-        //window.draw(gp);
-        window.draw(player);
+        window.draw(gp);
+        //window.draw(player);
 
         //Display - Fli
         window.display();

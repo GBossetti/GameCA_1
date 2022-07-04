@@ -9,8 +9,9 @@ GamePlay::GamePlay()
     points = 0;
     time_inmunidad = 0;
     juego_pausa = false;
+    apreta_pausa = false;
     game_over = false;
-    llegada = true;
+    llegada = false;
 
 
     texture_fondo.loadFromFile("ruta.png");
@@ -147,7 +148,6 @@ void GamePlay::juego()
         popup.setPuntos(points);
         popup.setVidas(vidas);
     }
-
 }
 
 void GamePlay::setTextos()
@@ -167,16 +167,16 @@ void GamePlay::setTextos()
 
 void GamePlay::pausa()
 {
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
-        if (!juego_pausa) {
-            juego_pausa = true;
-        } 
-        else if (juego_pausa) {
-            juego_pausa = false;
-        }
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && !apreta_pausa) {
+        juego_pausa = true;
+    } else if (juego_pausa && !apreta_pausa) {
+        apreta_pausa = true;
+    } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && apreta_pausa) {
+    juego_pausa = false;
+    } else if (!juego_pausa && apreta_pausa) {
+        apreta_pausa = false;
     }
 }
-
 
 void GamePlay::gameOver()
 {
@@ -184,7 +184,6 @@ void GamePlay::gameOver()
         game_over = true;
     }
 }
-
 
 int GamePlay::getVidas()
 {
