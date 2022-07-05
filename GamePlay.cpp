@@ -30,7 +30,7 @@ GamePlay::GamePlay()
 
 void GamePlay::update()
 {
-    if (!game_over && !llegada) {
+    if (!game_over && !llegada && !juego_pausa) {
         repartidor.update();
         carpincho.update();
         camarada.update();
@@ -38,12 +38,10 @@ void GamePlay::update()
         if (camarada.isCollision(carpincho)) {
             camarada.update();
         }
-
-        if (tiempojugado <= 5) {
+        if (tiempojugado <= 5 && !juego_pausa) {
             barrera.update();
         }
     }
-
     if (llegada) {
         popup.update();
     }

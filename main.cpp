@@ -15,15 +15,8 @@ int main()
     sf::RenderWindow window(sf::VideoMode(800, 600), "Carpincho's Attack"); //Píxeles tamaño de ventana + nombre
     window.setFramerateLimit(60); //Forzamos a que corra a 60 frames per second
 
-    int timer = 60*10; //Tiempo que tarda en volver a aparecer
-
     GamePlay gp;
     Jugadorxs player;
-
-
-    //Points
-    int vidas = 3;
-    int points = 0;
 
 
     //GameLoop
@@ -39,6 +32,7 @@ int main()
 
         if (player.getIngreso() && event.type == sf::Event::TextEntered)
         {
+
             player.cargarNombre(event.text.unicode);
             player.update();
         }

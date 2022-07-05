@@ -3,7 +3,8 @@
 Jugadorxs::Jugadorxs()
 {
 	//i = 0;
-	ingreso = false;
+	ingreso = true;
+	apreto_tecla = false;
 
 	//Cuadro de texto
 	_cuadro.setSize(sf::Vector2f(400, 300));
@@ -35,14 +36,13 @@ void Jugadorxs::draw(sf::RenderTarget& target, sf::RenderStates states) const
 
 
 
-void Jugadorxs::cargarNombre(int unicode)
+void Jugadorxs::cargarNombre(int n)
 {
 	//NO FUNCIONA BIEN
 	//if (i != 0 && unicode == 8) {
-	//		i = -1;
-	//		_nombre[i] = ' ';
+	//	i = -1;
+	//	_nombre[i] = ' ';
 	//}
-	//	
 	//if (unicode < 128) {
 	//	_nombre[i] = (char)unicode;
 	//}
@@ -50,7 +50,6 @@ void Jugadorxs::cargarNombre(int unicode)
 	//if (unicode == 10) {
 	//	_nombre[i] = '\0';
 	//}
-	//_playerText.setString(_nombre);
 	//i++;
 	
 	 
@@ -58,11 +57,14 @@ void Jugadorxs::cargarNombre(int unicode)
 	//_playerInput += static_cast<char>(unicode);
 	//_playerInput += (char)unicode;
 	//_playerText.setString(_playerInput);
-
+	int unicode = n;
 	int textSize = _playerInput.getSize();
+
+
+
 	if (unicode == 8) { //If backspace
 		if (textSize > 0)
-			_playerInput.erase(textSize - 1, 1); //Genera un arithmetic overflow
+			_playerInput.erase(static_cast<size_t>(textSize) - 1, 1); //Genera un arithmetic overflow
 	}
 	else if (unicode >= 32 && unicode <= 126) {
 		_playerInput += (char)unicode;
@@ -79,6 +81,7 @@ bool Jugadorxs::getIngreso()
 
 void Jugadorxs::update() 
 {
-	_playerText.setString(_playerInput);
+	_playerText.setString(_nombre);
+	//_playerText.setString(_playerInput);
 }
 

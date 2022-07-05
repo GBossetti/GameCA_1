@@ -10,6 +10,7 @@ private:
 	sf::Text _pideNombre, _playerText;
 	char _nombre[30];
 	bool ingreso;
+	bool apreto_tecla;
 	int i;
 
 
