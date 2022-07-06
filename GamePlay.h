@@ -25,7 +25,6 @@ private:
 	int vidas;
 	int tiempojugado;
 	int points;
-//	int timer = 60 * 10;
 	int time_inmunidad;
 	bool juego_pausa;
 	bool apreta_pausa;
@@ -39,7 +38,6 @@ public:
 
 	void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
 	void aceleracion();
-//	void respawn();
 	void juego();
 	void pausa();
 	void gameOver();

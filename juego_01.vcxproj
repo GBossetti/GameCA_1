@@ -149,7 +149,9 @@
     <ClCompile Include="Carpincho.cpp" />
     <ClCompile Include="CarpinchoCopado.cpp" />
     <ClCompile Include="Collisionable.cpp" />
+    <ClCompile Include="C_Attack.cpp" />
     <ClCompile Include="GamePlay.cpp" />
+    <ClCompile Include="GameState.cpp" />
     <ClCompile Include="Jugadorxs.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Obstaculo.cpp" />
@@ -160,7 +162,9 @@
     <ClInclude Include="Carpincho.h" />
     <ClInclude Include="CarpinchoCopado.h" />
     <ClInclude Include="Collisionable.h" />
+    <ClInclude Include="C_Attack.h" />
     <ClInclude Include="GamePlay.h" />
+    <ClInclude Include="GameState.h" />
     <ClInclude Include="Jugadorxs.h" />
     <ClInclude Include="Obstaculo.h" />
     <ClInclude Include="Personaje.h" />
