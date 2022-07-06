@@ -26,16 +26,19 @@ int main()
         sf::Event event;
         while (window.pollEvent(event))
         {
-            if (event.type == sf::Event::Closed)
+            if (event.type == sf::Event::Closed) {
                 window.close();
+            }
+         
+            if (player.getIngreso() && event.type == sf::Event::TextEntered)
+            {
+                player.cargarNombre(static_cast<char>(event.text.unicode));
+                player.update();
+                std::cout << "ASCII character typed: " << static_cast<char>(event.text.unicode) << std::endl;
+            }
         }
 
-        if (player.getIngreso() && event.type == sf::Event::TextEntered)
-        {
 
-            player.cargarNombre(event.text.unicode);
-            player.update();
-        }
 
 
         gp.aceleracion();
@@ -48,8 +51,8 @@ int main()
         window.clear();
 
         //Draw
-        window.draw(gp);
-        //window.draw(player);
+        //window.draw(gp);
+        window.draw(player);
 
         //Display - Fli
         window.display();
