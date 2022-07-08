@@ -6,15 +6,39 @@
 #include "CarpinchoCopado.h"
 #include "GamePlay.h"
 #include "Jugadorxs.h"
+#include "Pantallas.h"
+
 
 int main()
 {
     std::srand((unsigned)std::time(0)); //Planto la semilla para poder usar random con ctime
 
-    //Inicialización de la ventana:
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Carpincho's Attack"); //Píxeles tamaño de ventana + nombre
-    window.setFramerateLimit(60); //Forzamos a que corra a 60 frames per second
+    std::vector<cScreen*> Screens;
+    int screen = 0;
 
+    sf::RenderWindow window(sf::VideoMode(800, 600), "Carpincho's Attack");
+    window.setFramerateLimit(60);
+
+    // Declaracion de escenas
+    Menu menu;
+    Screens.push_back(&menu); // Menu es 0 en el vector de escenas
+
+    Credits creditos;
+    Screens.push_back(&creditos); // 1
+
+    GamePlay gp;
+    Screens.push_back(&gp); // 2
+
+
+    while (screen >= 0)
+    {
+        screen = Screens[screen]->Run(window);
+    }
+
+    return EXIT_SUCCESS;
+
+}
+/*
     GamePlay gp;
     Jugadorxs player;
 
@@ -61,3 +85,4 @@ int main()
     //Liberación del juego
     return 0;
 }
+*/

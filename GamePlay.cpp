@@ -13,19 +13,74 @@ GamePlay::GamePlay()
     game_over = false;
     llegada = false;
 
+}
 
-    texture_fondo.loadFromFile("ruta.png");
-    image.setTexture(texture_fondo);
+int GamePlay::Run(sf::RenderWindow& window)
+{
+        sf::Event Event;
+        bool Running = true;
+        sf::RenderStates states;
 
-    font.loadFromFile("8bit.ttf");
-    
-    text.setFont(font);
-    text_vida.setFont(font);
-    text_game_over.setFont(font);
-    text_pausa.setFont(font);
+        texture_fondo.loadFromFile("ruta.png");
+        image.setTexture(texture_fondo);
 
-    carpincho.respawn();
-    camarada.respawn();
+        font.loadFromFile("8bit.ttf");
+
+        text.setFont(font);
+        text_vida.setFont(font);
+        text_game_over.setFont(font);
+        text_pausa.setFont(font);
+
+        carpincho.respawn();
+        camarada.respawn();
+
+        while (Running)
+        {
+            //Verifying events
+            while (window.pollEvent(Event))
+            {
+                // Window closed
+                if (Event.type == sf::Event::Closed)
+                {
+                    return (-1);
+                }
+                //Key pressed
+                if (Event.type == sf::Event::KeyPressed)
+                {
+                    switch (Event.key.code)
+                    {
+                    case sf::Keyboard::Escape:
+                        return (0);
+                        break;
+                    
+                    //sf::Keyboard::Return:
+                        //return(4); 4 es GamePlay2
+                        //break;
+                    
+                    default:
+                        break;
+                    }
+                }
+            }
+
+            //Updating
+            aceleracion();
+            juego();
+            setTextos();
+            pausa();
+            gameOver();
+            update();
+
+            //Clearing screen
+            window.clear(sf::Color::Black);
+
+            //Drawing
+            draw(window, states);
+            window.display();
+        }
+
+        //Never reaching this point normally, but just in case, exit the application
+        return -1;
 }
 
 void GamePlay::update()

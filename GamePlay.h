@@ -1,5 +1,6 @@
 #pragma once
 #include <SFML\Graphics.hpp>
+#include "cScreen.h"
 #include "Personaje.h"
 #include "Obstaculo.h"
 #include "Carpincho.h"
@@ -8,7 +9,7 @@
 #include "Jugadorxs.h"
 
 
-class GamePlay: public sf::Drawable
+class GamePlay: public sf::Drawable, public cScreen
 {
 private:
 	Personaje repartidor;
@@ -33,9 +34,9 @@ private:
 
 public:
 	GamePlay();
+	virtual int Run(sf::RenderWindow& window);
 	void update();
 	void setTextos();
-
 	void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
 	void aceleracion();
 	void juego();
