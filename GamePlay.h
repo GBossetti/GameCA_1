@@ -6,15 +6,19 @@
 #include "CarpinchoCopado.h"
 #include "PopUp.h"
 #include "Jugadorxs.h"
+#include "CarpinchoHeavy.h"
+#include "Golf.h"
 
 
-class GamePlay: public sf::Drawable
+class GamePlay : public sf::Drawable
 {
 private:
 	Personaje repartidor;
 	Carpincho carpincho;
 	CarpinchoCopado camarada;
+	CarpinchoHeavy heavy;
 	Obstaculo barrera;
+	Golf pelota;
 	PopUp popup;
 
 	sf::Sprite image;
@@ -45,4 +49,5 @@ public:
 	int getVidas();
 	int getPuntos();
 };
+
 

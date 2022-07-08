@@ -1,2 +1,3 @@
-﻿  main.cpp
+﻿  Golf.cpp
+C:\Users\Gonzalo\Documents\GitHub\GameCA\Golf.cpp(27,31): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   juego_01.vcxproj -> C:\Users\Gonzalo\Documents\GitHub\GameCA\x64\Debug\juego_01.exe

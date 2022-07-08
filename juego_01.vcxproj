@@ -148,10 +148,15 @@
   <ItemGroup>
     <ClCompile Include="Carpincho.cpp" />
     <ClCompile Include="CarpinchoCopado.cpp" />
+    <ClCompile Include="CarpinchoHeavy.cpp" />
     <ClCompile Include="Collisionable.cpp" />
     <ClCompile Include="C_Attack.cpp" />
     <ClCompile Include="GamePlay.cpp" />
     <ClCompile Include="GameState.cpp" />
+    <ClCompile Include="Golf.cpp" />
+    <ClCompile Include="gp1.cpp" />
+    <ClCompile Include="gp2.cpp" />
+    <ClCompile Include="gp3.cpp" />
     <ClCompile Include="Jugadorxs.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Obstaculo.cpp" />
@@ -161,10 +166,15 @@
   <ItemGroup>
     <ClInclude Include="Carpincho.h" />
     <ClInclude Include="CarpinchoCopado.h" />
+    <ClInclude Include="CarpinchoHeavy.h" />
     <ClInclude Include="Collisionable.h" />
     <ClInclude Include="C_Attack.h" />
     <ClInclude Include="GamePlay.h" />
     <ClInclude Include="GameState.h" />
+    <ClInclude Include="Golf.h" />
+    <ClInclude Include="gp1.h" />
+    <ClInclude Include="gp2.h" />
+    <ClInclude Include="gp3.h" />
     <ClInclude Include="Jugadorxs.h" />
     <ClInclude Include="Obstaculo.h" />
     <ClInclude Include="Personaje.h" />

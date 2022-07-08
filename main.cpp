@@ -51,8 +51,8 @@ int main()
         window.clear();
 
         //Draw
-        //window.draw(gp);
-        window.draw(player);
+        window.draw(gp);
+        //window.draw(player);
 
         //Display - Fli
         window.display();

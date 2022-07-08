@@ -48,6 +48,21 @@
     <ClCompile Include="C_Attack.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="gp1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gp2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gp3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CarpinchoHeavy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Golf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Personaje.h">
@@ -78,6 +93,21 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="C_Attack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gp1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gp2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gp3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CarpinchoHeavy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Golf.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

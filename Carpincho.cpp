@@ -4,7 +4,7 @@
 Carpincho::Carpincho()
 {
 	_body.setSize(sf::Vector2f(50, 100));
-	_textura.loadFromFile("carpincho.png"); // asigno imagen a textura
+	_textura.loadFromFile("carpincho.png"); 
 	_sprite.setTextureRect({0,0, (int)_textura.getSize().x, (int)_textura.getSize().y });
 	_sprite.setOrigin(_sprite.getGlobalBounds().width / 2, _sprite.getGlobalBounds().height / 2);
 }
@@ -24,9 +24,9 @@ void Carpincho::draw(sf::RenderTarget& target, sf::RenderStates states) const
 
 void Carpincho::respawn()
 {
-	_sprite.setPosition((std::rand() % 200) + 150 + _sprite.getLocalBounds().width, -100 - (std::rand() % 300));
+	//_sprite.setPosition((std::rand() % 200) + 150 + _sprite.getLocalBounds().width, -200 - (std::rand() % 300));
+	_sprite.setPosition((std::rand() % 200) + 150 + _sprite.getLocalBounds().width, -200);
 }
-
 
 sf::FloatRect Carpincho::getBounds() const
 {
