@@ -6,6 +6,9 @@
 #include "CarpinchoCopado.h"
 #include "GamePlay.h"
 #include "Jugadorxs.h"
+#include "gp1.h"
+#include "gp2.h"
+#include "gp3.h"
 
 int main()
 {
@@ -16,6 +19,11 @@ int main()
     window.setFramerateLimit(60); //Forzamos a que corra a 60 frames per second
 
     GamePlay gp;
+    GamePlay1 gp1;
+    GamePlay2 gp2;
+    GamePlay3 gp3;
+
+
     Jugadorxs player;
 
 
@@ -35,24 +43,25 @@ int main()
                 player.cargarNombre(static_cast<char>(event.text.unicode));
                 player.update();
                 std::cout << "ASCII character typed: " << static_cast<char>(event.text.unicode) << std::endl;
+
             }
         }
 
 
 
 
-        gp.aceleracion();
-        gp.juego();
-        gp.setTextos();
-        gp.pausa();
-        gp.gameOver();
-        gp.update();
+        gp3.aceleracion();
+        gp3.juego();
+        gp3.setTextos();
+        gp3.pausa();
+        gp3.gameOver();
+        gp3.update();
 
         window.clear();
 
         //Draw
-        window.draw(gp);
-        //window.draw(player);
+        //window.draw(gp3);
+        window.draw(player);
 
         //Display - Fli
         window.display();

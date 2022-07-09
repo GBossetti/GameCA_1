@@ -1,3 +1,5 @@
-﻿  Golf.cpp
-C:\Users\Gonzalo\Documents\GitHub\GameCA\Golf.cpp(27,31): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+﻿  Jugadorxs.cpp
+C:\Users\Gonzalo\Documents\GitHub\GameCA\Jugadorxs.cpp(42,39): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  main.cpp
+  Generating Code...
   juego_01.vcxproj -> C:\Users\Gonzalo\Documents\GitHub\GameCA\x64\Debug\juego_01.exe

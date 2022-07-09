@@ -3,7 +3,7 @@
 Jugadorxs::Jugadorxs()
 {
 	//i = 0;
-	ingreso = false;
+	ingreso = true;
 
 	//Cuadro de texto
 	_cuadro.setSize(sf::Vector2f(400, 300));

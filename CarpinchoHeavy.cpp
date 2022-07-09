@@ -22,7 +22,7 @@ void CarpinchoHeavy::draw(sf::RenderTarget& target, sf::RenderStates states) con
 
 void CarpinchoHeavy::respawn()
 {
-	_sprite.setPosition((std::rand() % 200) + 150 + _sprite.getLocalBounds().width, -200 - (std::rand() % 300));
+	_sprite.setPosition((std::rand() % 200) + 150 + _sprite.getLocalBounds().width, -200);
 }
 
 sf::FloatRect CarpinchoHeavy::getBounds() const

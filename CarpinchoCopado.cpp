@@ -23,7 +23,7 @@ void CarpinchoCopado::draw(sf::RenderTarget& target, sf::RenderStates states) co
 
 void CarpinchoCopado::respawn() 
 {
-	_sprite.setPosition((std::rand() % 200) + 150 + _sprite.getLocalBounds().width, -350 - (std::rand() % 300));
+	_sprite.setPosition((std::rand() % 200) + 150 + _sprite.getLocalBounds().width, -350 - (std::rand() % 300)); //Random. eje y, es para que se separen de los otros items al crearse
 }
 
 sf::FloatRect CarpinchoCopado::getBounds() const

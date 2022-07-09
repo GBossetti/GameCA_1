@@ -39,15 +39,15 @@ void GamePlay::update()
         pelota.update();
 
         if (heavy.isCollision(carpincho)) {
-            heavy.update();
+            heavy.respawn();
         }
 
         if (camarada.isCollision(carpincho)) {
-            camarada.update();
+            camarada.respawn();
         }
 
         if (camarada.isCollision(heavy)) {
-            camarada.update();
+            camarada.respawn();
         }
 
         if (tiempojugado <= 5 && !juego_pausa) {

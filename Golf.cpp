@@ -24,7 +24,7 @@ void Golf::draw(sf::RenderTarget& target, sf::RenderStates states) const
 
 void Golf::respawn()
 {
-	_sprite.setPosition(-250, 50 + (std::rand() % 300));
+	_sprite.setPosition(-50, -100 + (std::rand() % 100));
 
 }
 

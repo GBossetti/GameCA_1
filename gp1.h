@@ -8,7 +8,7 @@
 #include "Jugadorxs.h"
 
 
-class GamePlay : public sf::Drawable
+class GamePlay1 : public sf::Drawable
 {
 private:
 	Personaje repartidor;
@@ -32,7 +32,7 @@ private:
 	bool llegada;
 
 public:
-	GamePlay();
+	GamePlay1();
 	void update();
 	void setTextos();
 

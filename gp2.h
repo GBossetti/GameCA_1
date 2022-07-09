@@ -9,7 +9,7 @@
 #include "CarpinchoHeavy.h"
 
 
-class GamePlay : public sf::Drawable
+class GamePlay2 : public sf::Drawable
 {
 private:
 	Personaje repartidor;
@@ -34,7 +34,7 @@ private:
 	bool llegada;
 
 public:
-	GamePlay();
+	GamePlay2();
 	void update();
 	void setTextos();
 
