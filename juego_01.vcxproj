@@ -148,29 +148,43 @@
   <ItemGroup>
     <ClCompile Include="Carpincho.cpp" />
     <ClCompile Include="CarpinchoCopado.cpp" />
+    <ClCompile Include="CarpinchoHeavy.cpp" />
     <ClCompile Include="Collisionable.cpp" />
     <ClCompile Include="Credits.cpp" />
     <ClCompile Include="GamePlay.cpp" />
+    <ClCompile Include="GamePlay1.cpp" />
+    <ClCompile Include="GamePlay2.cpp" />
+    <ClCompile Include="GamePlay3.cpp" />
+    <ClCompile Include="Golf.cpp" />
+    <ClCompile Include="Jugador.cpp" />
     <ClCompile Include="Jugadorxs.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="Obstaculo.cpp" />
     <ClCompile Include="Personaje.cpp" />
     <ClCompile Include="PopUp.cpp" />
+    <ClCompile Include="Scores.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Carpincho.h" />
     <ClInclude Include="CarpinchoCopado.h" />
+    <ClInclude Include="CarpinchoHeavy.h" />
     <ClInclude Include="Collisionable.h" />
     <ClInclude Include="Credits.h" />
     <ClInclude Include="GamePlay.h" />
     <ClInclude Include="cScreen.h" />
+    <ClInclude Include="GamePlay1.h" />
+    <ClInclude Include="GamePlay2.h" />
+    <ClInclude Include="GamePlay3.h" />
+    <ClInclude Include="Golf.h" />
+    <ClInclude Include="Jugador.h" />
     <ClInclude Include="Jugadorxs.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="Obstaculo.h" />
     <ClInclude Include="Pantallas.h" />
     <ClInclude Include="Personaje.h" />
     <ClInclude Include="PopUp.h" />
+    <ClInclude Include="Scores.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

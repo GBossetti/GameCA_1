@@ -1,20 +1,21 @@
-﻿  GamePlay.cpp
-C:\Users\usuario\Documents\GitHub\GameCA_1\GamePlay.cpp(140,43): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\usuario\Documents\GitHub\GameCA_1\GamePlay.cpp(147,44): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\usuario\Documents\GitHub\GameCA_1\GamePlay.cpp(157,23): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\usuario\Documents\GitHub\GameCA_1\GamePlay.cpp(163,47): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+﻿  GamePlay1.cpp
+C:\Users\Gonzalo\Desktop\Projects\c++\GameCA_1-Menu\GamePlay1.cpp(175,43): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Gonzalo\Desktop\Projects\c++\GameCA_1-Menu\GamePlay1.cpp(182,44): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Gonzalo\Desktop\Projects\c++\GameCA_1-Menu\GamePlay1.cpp(191,23): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Gonzalo\Desktop\Projects\c++\GameCA_1-Menu\GamePlay1.cpp(192,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Gonzalo\Desktop\Projects\c++\GameCA_1-Menu\GamePlay1.cpp(198,47): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\usuario\Documents\GitHub\GameCA_1\GamePlay.cpp(164,46): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\Gonzalo\Desktop\Projects\c++\GameCA_1-Menu\GamePlay1.cpp(199,46): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\usuario\Documents\GitHub\GameCA_1\GamePlay.cpp(165,45): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+C:\Users\Gonzalo\Desktop\Projects\c++\GameCA_1-Menu\GamePlay1.cpp(200,45): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
           with
           [
               T=float
           ]
-  juego_01.vcxproj -> C:\Users\usuario\Documents\GitHub\GameCA_1\x64\Debug\juego_01.exe
+  juego_01.vcxproj -> C:\Users\Gonzalo\Desktop\Projects\c++\GameCA_1-Menu\x64\Debug\juego_01.exe

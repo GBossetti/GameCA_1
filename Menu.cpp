@@ -74,7 +74,7 @@ int Menu::Run(sf::RenderWindow& window)
                     {
                     case 0:
                         playing = true;
-                        return (2);
+                        return (3);
                         break;
 
                     case 1:
@@ -84,7 +84,7 @@ int Menu::Run(sf::RenderWindow& window)
 
                     case 2:
                         scores = true;
-                        return (3);
+                        return (2);
                         break;
 
                     case 3:
