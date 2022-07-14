@@ -285,4 +285,9 @@ int GamePlay3::getPuntos()
     return points;
 }
 
+bool GamePlay3::getCambiaNivel()
+{
+    return cambia_nivel;
+}
+
 

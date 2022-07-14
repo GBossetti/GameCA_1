@@ -58,8 +58,9 @@ int GamePlay1::Run(sf::RenderWindow& window)
                     break;
 
                 case sf::Keyboard::Enter:
-                    if (cambia_nivel) {
-                        return(4); //4 es GamePlay2
+                    if (cambia_nivel) {   //y cambiar_nivel?????
+                        return true; //4 es GamePlay2
+
                     }
                     break;
 
@@ -288,4 +289,9 @@ int GamePlay1::getVidas()
 int GamePlay1::getPuntos()
 {
     return points;
+}
+
+bool GamePlay1::getCambiaNivel()
+{
+    return cambia_nivel;
 }

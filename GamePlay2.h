@@ -48,5 +48,7 @@ public:
 
 	int getVidas();
 	int getPuntos();
+
+	bool getCambiaNivel();
 };
 

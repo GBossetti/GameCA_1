@@ -1,21 +1,2 @@
-﻿  GamePlay1.cpp
-C:\Users\Gonzalo\Desktop\Projects\c++\GameCA_1-Menu\GamePlay1.cpp(175,43): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\Gonzalo\Desktop\Projects\c++\GameCA_1-Menu\GamePlay1.cpp(182,44): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\Gonzalo\Desktop\Projects\c++\GameCA_1-Menu\GamePlay1.cpp(191,23): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\Gonzalo\Desktop\Projects\c++\GameCA_1-Menu\GamePlay1.cpp(192,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Gonzalo\Desktop\Projects\c++\GameCA_1-Menu\GamePlay1.cpp(198,47): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\Gonzalo\Desktop\Projects\c++\GameCA_1-Menu\GamePlay1.cpp(199,46): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\Gonzalo\Desktop\Projects\c++\GameCA_1-Menu\GamePlay1.cpp(200,45): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-  juego_01.vcxproj -> C:\Users\Gonzalo\Desktop\Projects\c++\GameCA_1-Menu\x64\Debug\juego_01.exe
+﻿  GameScene.cpp
+  juego_01.vcxproj -> C:\Users\Gonzalo\Documents\GitHub\GameCA\x64\Debug\juego_01.exe
