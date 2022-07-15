@@ -295,3 +295,8 @@ bool GamePlay1::getCambiaNivel()
 {
     return cambia_nivel;
 }
+
+GamePlay1::~GamePlay1()
+{
+    std::cout << "Se rompe ese GamePlay1";
+}

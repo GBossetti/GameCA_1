@@ -52,5 +52,7 @@ public:
 	int getPuntos();
 
 	bool getCambiaNivel();
+
+	~GamePlay1();
 };
 

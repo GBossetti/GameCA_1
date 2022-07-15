@@ -52,6 +52,8 @@ int GameScene::Run(sf::RenderWindow& window)
         //
         ////Drawing
         //window.display();
+        
+        
         return 0;
     }
 
