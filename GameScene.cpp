@@ -35,7 +35,9 @@ int GameScene::Run(sf::RenderWindow& window)
 		    gp1.Run(window);
             gp1.update();
         }
-	
+	    
+
+
 	    while (!gp2.getCambiaNivel()) {
 		    gp2.Run(window);
             gp2.update();

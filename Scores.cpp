@@ -26,10 +26,10 @@ int Scores::Run(sf::RenderWindow& window)
     {
         while (window.pollEvent(Event))
         {
-            //if (Event.type == sf::Event::Closed)
-            //{
-            //    return (-1);
-            //}
+            if (Event.type == sf::Event::Closed)
+            {
+                return (-1);
+            }
 
             if (Event.type == sf::Event::KeyPressed)
             {

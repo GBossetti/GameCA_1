@@ -7,7 +7,7 @@
 #include "CarpinchoCopado.h"
 #include "PopUp.h"
 #include "Jugador.h"
-
+#include "Registro.h"
 
 class GamePlay1 : public sf::Drawable, public cScreen
 {
@@ -18,6 +18,8 @@ private:
 	Obstaculo barrera;
 	PopUp popup;
 	Jugador player;
+
+	Registro registro;
 
 	sf::Sprite image;
 	sf::Texture texture_fondo;
@@ -47,9 +49,6 @@ public:
 	void juego();
 	void pausa();
 	void gameOver();
-
-	int getVidas();
-	int getPuntos();
 
 	bool getCambiaNivel();
 

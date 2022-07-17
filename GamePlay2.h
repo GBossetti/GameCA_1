@@ -46,8 +46,6 @@ public:
 	void pausa();
 	void gameOver();
 
-	int getVidas();
-	int getPuntos();
 
 	bool getCambiaNivel();
 };

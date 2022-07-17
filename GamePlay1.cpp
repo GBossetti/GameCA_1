@@ -46,7 +46,8 @@ int GamePlay1::Run(sf::RenderWindow& window)
             // Window closed
             if (Event.type == sf::Event::Closed)
             {
-                return (-1);
+                //return (-1);
+                window.close();
             }
             //Key pressed
             if (Event.type == sf::Event::KeyPressed)
@@ -295,6 +296,7 @@ bool GamePlay1::getCambiaNivel()
 {
     return cambia_nivel;
 }
+
 
 GamePlay1::~GamePlay1()
 {

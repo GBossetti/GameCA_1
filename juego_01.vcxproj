@@ -164,6 +164,7 @@
     <ClCompile Include="Obstaculo.cpp" />
     <ClCompile Include="Personaje.cpp" />
     <ClCompile Include="PopUp.cpp" />
+    <ClCompile Include="Registro.cpp" />
     <ClCompile Include="Scores.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -186,6 +187,7 @@
     <ClInclude Include="Pantallas.h" />
     <ClInclude Include="Personaje.h" />
     <ClInclude Include="PopUp.h" />
+    <ClInclude Include="Registro.h" />
     <ClInclude Include="Scores.h" />
   </ItemGroup>
   <ItemGroup>

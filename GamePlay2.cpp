@@ -45,7 +45,8 @@ int GamePlay2::Run(sf::RenderWindow& window)
             // Window closed
             if (Event.type == sf::Event::Closed)
             {
-                return (-1);
+                //return (-1);
+                window.close();
             }
             //Key pressed
             if (Event.type == sf::Event::KeyPressed)
@@ -266,16 +267,6 @@ void GamePlay2::gameOver()
     if (vidas < 1) {
         game_over = true;
     }
-}
-
-int GamePlay2::getVidas()
-{
-    return vidas;
-}
-
-int GamePlay2::getPuntos()
-{
-    return points;
 }
 
 bool GamePlay2::getCambiaNivel()
