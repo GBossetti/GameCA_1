@@ -17,7 +17,7 @@ private:
 
 public:
 	virtual int Run(sf::RenderWindow& window);
-
+	void setVidas(int vida);
 
 };
 

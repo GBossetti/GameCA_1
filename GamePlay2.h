@@ -50,5 +50,8 @@ public:
 	int getPuntos();
 
 	bool getCambiaNivel();
+	void setCambiaNivel();
+	void setVidas(int vida);
+
 };
 

@@ -283,4 +283,14 @@ bool GamePlay2::getCambiaNivel()
     return cambia_nivel;
 }
 
+void GamePlay2::setCambiaNivel()
+{
+    cambia_nivel = false;
+}
+
+void GamePlay2::setVidas(int vida)
+{
+    vidas = vida;
+}
+
 

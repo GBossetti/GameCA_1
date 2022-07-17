@@ -28,3 +28,8 @@ sf::FloatRect Obstaculo::getBounds() const
 {
 	return _sprite.getGlobalBounds();
 }
+
+void Obstaculo::setPosicionIni()
+{
+	_sprite.setPosition(300, -50);
+}

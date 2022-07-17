@@ -52,5 +52,6 @@ public:
 	int getPuntos();
 
 	bool getCambiaNivel();
+	void setCambiaNivel();
 };
 

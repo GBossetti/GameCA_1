@@ -7,6 +7,7 @@
 #include "CarpinchoCopado.h"
 #include "PopUp.h"
 #include "Jugador.h"
+#include<iostream>
 
 
 class GamePlay1 : public sf::Drawable, public cScreen
@@ -52,7 +53,11 @@ public:
 	int getPuntos();
 
 	bool getCambiaNivel();
+	void setCambiaNivel();
+	void setValorInicial();
 
-	~GamePlay1();
+	void setLlegada();
+	void setTiempo();
+
 };
 

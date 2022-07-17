@@ -12,7 +12,7 @@ GamePlay3::GamePlay3()
     apreta_pausa = false;
     game_over = false;
     llegada = false;
-    cambia_nivel = false;
+    cambia_nivel = true;
 }
 
 int GamePlay3::Run(sf::RenderWindow& window)
@@ -288,6 +288,11 @@ int GamePlay3::getPuntos()
 bool GamePlay3::getCambiaNivel()
 {
     return cambia_nivel;
+}
+
+void GamePlay3::setCambiaNivel()
+{
+    cambia_nivel = false;
 }
 
 

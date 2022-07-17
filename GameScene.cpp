@@ -6,6 +6,8 @@ int GameScene::Run(sf::RenderWindow& window)
     bool Running = true;
     sf::RenderStates states;
 
+
+
     while (Running)
     {
         //Verifying events
@@ -37,7 +39,9 @@ int GameScene::Run(sf::RenderWindow& window)
         }
 	
 	    while (!gp2.getCambiaNivel()) {
-		    gp2.Run(window);
+            setVidas(gp1.getVidas());
+            gp2.setVidas(this->_vidas);
+            gp2.Run(window);
             gp2.update();
 
 	    }
@@ -46,6 +50,10 @@ int GameScene::Run(sf::RenderWindow& window)
 		    gp3.Run(window);
             gp3.update();
 	    }
+
+        gp1.setCambiaNivel();
+        gp1.setValorInicial();
+        gp1.update();
 
         ////Clearing screen
         //window.clear(sf::Color::Black);
@@ -59,5 +67,10 @@ int GameScene::Run(sf::RenderWindow& window)
 
     //Never reaching this point normally, but just in case, exit the application
     return -1;
+}
+
+void GameScene::setVidas(int vida)
+{
+    _vidas = vida;
 }
 

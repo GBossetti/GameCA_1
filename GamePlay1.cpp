@@ -5,7 +5,7 @@
 GamePlay1::GamePlay1()
 {
     vidas = 13;
-    tiempojugado = 60 * 5;
+    tiempojugado = 60 * 10;
     points = 0;
     time_inmunidad = 0;
     juego_pausa = false;
@@ -46,7 +46,7 @@ int GamePlay1::Run(sf::RenderWindow& window)
             // Window closed
             if (Event.type == sf::Event::Closed)
             {
-                return (-1);
+                window.close();
             }
             //Key pressed
             if (Event.type == sf::Event::KeyPressed)
@@ -125,12 +125,10 @@ void GamePlay1::update()
     if (llegada) {
         popup.update();
     }
-
 }
 
 void GamePlay1::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
-    
     if (!ingreso_nombre) {
         target.draw(player, states);
     }
@@ -143,7 +141,6 @@ void GamePlay1::draw(sf::RenderTarget& target, sf::RenderStates states) const
         target.draw(text, states);
         target.draw(text_vida, states);
         target.draw(nombre, states);
-
 
         if (tiempojugado < 5) {
             target.draw(barrera, states);
@@ -219,6 +216,7 @@ void GamePlay1::juego()
         repartidor.setTransparencia(repartidor.getInmunidad());
 
         if (repartidor.isCollision(barrera)) {
+            std::cout << "prueba2";
             llegada = true;
         }
 
@@ -296,7 +294,27 @@ bool GamePlay1::getCambiaNivel()
     return cambia_nivel;
 }
 
-GamePlay1::~GamePlay1()
+void GamePlay1::setCambiaNivel()
 {
-    std::cout << "Se rompe ese GamePlay1";
+    cambia_nivel = false;
 }
+
+void GamePlay1::setValorInicial()
+{
+    setLlegada();
+    setTiempo();
+    barrera.setPosicionIni();
+
+}
+
+void GamePlay1::setLlegada()
+{
+    llegada = false;
+    std::cout<<"prueba";
+}
+
+void GamePlay1::setTiempo()
+{
+    tiempojugado = 60 * 2;
+}
+
