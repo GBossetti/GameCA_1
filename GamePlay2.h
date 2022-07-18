@@ -6,7 +6,6 @@
 #include "Carpincho.h"
 #include "CarpinchoCopado.h"
 #include "PopUp.h"
-#include "Jugadorxs.h"
 #include "CarpinchoHeavy.h"
 
 
@@ -20,6 +19,7 @@ private:
 	Obstaculo barrera;
 	PopUp popup;
 
+	std::string _nombre;
 	sf::Sprite image;
 	sf::Texture texture_fondo;
 	sf::Font font;
@@ -45,13 +45,24 @@ public:
 	void juego();
 	void pausa();
 	void gameOver();
-
+	
+	void setVidas(int vida);
 	int getVidas();
+	
+	void setPuntos(int puntos);
 	int getPuntos();
 
 	bool getCambiaNivel();
 	void setCambiaNivel();
-	void setVidas(int vida);
+
+	void setValorInicial();
+	void setLlegada();
+	void setTiempo();
+	void setInmunidad();
+	void setGameOver();
+
+	void setNombre(std::string nom);
+	
 
 };
 

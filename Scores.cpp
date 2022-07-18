@@ -6,7 +6,7 @@ Scores::Scores()
 
 int Scores::Run(sf::RenderWindow& window)
 {
-    _texturecred.loadFromFile("creditoscp.png");
+    _texturecred.loadFromFile("Scores.png");
     _backgroundcred.setTexture(_texturecred);
 
     _font.loadFromFile("8bit.ttf");
@@ -55,4 +55,32 @@ int Scores::Run(sf::RenderWindow& window)
 
 
     return (-1);
+}
+
+void Scores::MostrarPuntajes()
+{
+    Archivo reg;
+    int cantReg = reg.ContarRegistros();
+
+    Archivo* vPuntajes;
+    vPuntajes = new Archivo[cantReg];
+    if (vPuntajes == NULL) return;
+
+    for (int i = 0; i < cantReg; i++) {
+        reg.LeerDeDisco(i);
+        vPuntajes[i].setNombre(reg.getNombre());
+        vPuntajes[i].setPuntos(reg.getPuntos());
+    }
+
+    Archivo aux;
+    for (int i = 0; i < cantReg - 1; i++) {
+        for (int j = i + 1; j < cantReg; j++) {
+            if (vPuntajes[i].getPuntos() > vPuntajes[j].getPuntos()) {
+                aux = vPuntajes[i];
+                vPuntajes[i] = vPuntajes[j];
+                vPuntajes[j] = aux;
+            }
+    }
+
+    delete vPuntajes;
 }

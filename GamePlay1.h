@@ -48,16 +48,23 @@ public:
 	void juego();
 	void pausa();
 	void gameOver();
+	
+	std::string getNombre();
 
+	void setVidas();
 	int getVidas();
+
+	void setPuntos();
 	int getPuntos();
 
 	bool getCambiaNivel();
 	void setCambiaNivel();
+	
 	void setValorInicial();
-
 	void setLlegada();
 	void setTiempo();
-
+	void setInmunidad();
+	void setGameOver();
+	void setIngresoNombre();
 };
 

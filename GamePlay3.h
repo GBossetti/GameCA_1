@@ -6,7 +6,6 @@
 #include "Carpincho.h"
 #include "CarpinchoCopado.h"
 #include "PopUp.h"
-#include "Jugadorxs.h"
 #include "CarpinchoHeavy.h"
 #include "Golf.h"
 
@@ -22,6 +21,7 @@ private:
 	Golf pelota;
 	PopUp popup;
 
+	std::string _nombre;
 	sf::Sprite image;
 	sf::Texture texture_fondo;
 	sf::Font font;
@@ -48,10 +48,22 @@ public:
 	void pausa();
 	void gameOver();
 
+	void setVidas(int vida);
 	int getVidas();
+
+	void setPuntos(int puntos);
 	int getPuntos();
 
 	bool getCambiaNivel();
 	void setCambiaNivel();
+
+	void setValorInicial();
+	void setLlegada();
+	void setTiempo();
+	void setInmunidad();
+	void setGameOver();
+
+	void setNombre(std::string nom);
+
 };
 

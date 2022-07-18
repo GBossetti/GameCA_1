@@ -4,8 +4,8 @@
 
 GamePlay1::GamePlay1()
 {
-    vidas = 13;
-    tiempojugado = 60 * 10;
+    vidas = 3;
+    tiempojugado = 60 * 5;
     points = 0;
     time_inmunidad = 0;
     juego_pausa = false;
@@ -51,11 +51,11 @@ int GamePlay1::Run(sf::RenderWindow& window)
             //Key pressed
             if (Event.type == sf::Event::KeyPressed)
             {
-                switch (Event.key.code)
-                {
-                case sf::Keyboard::Escape:
-                    return (0);
-                    break;
+                //switch (Event.key.code)
+                //{
+                //case sf::Keyboard::Escape:
+                //    return (0);
+                //    break;
 
                 case sf::Keyboard::Enter:
                     if (cambia_nivel) {   //y cambiar_nivel?????
@@ -279,9 +279,34 @@ void GamePlay1::gameOver()
     }
 }
 
+std::string GamePlay1::getNombre()
+{
+    return player.getNombre();
+}
+
+void GamePlay1::setGameOver()
+{
+    game_over = false;
+}
+
+void GamePlay1::setIngresoNombre()
+{
+    ingreso_nombre = false;
+}
+
+void GamePlay1::setVidas()
+{
+    vidas = 3;
+}
+
 int GamePlay1::getVidas()
 {
     return vidas;
+}
+
+void GamePlay1::setPuntos()
+{
+    points = 0;
 }
 
 int GamePlay1::getPuntos()
@@ -301,20 +326,30 @@ void GamePlay1::setCambiaNivel()
 
 void GamePlay1::setValorInicial()
 {
+    setVidas();
+    setPuntos();
     setLlegada();
     setTiempo();
     barrera.setPosicionIni();
+    setInmunidad();
+    setGameOver();
+    setCambiaNivel();
+    setIngresoNombre();
 
 }
 
 void GamePlay1::setLlegada()
 {
     llegada = false;
-    std::cout<<"prueba";
 }
 
 void GamePlay1::setTiempo()
 {
-    tiempojugado = 60 * 2;
+    tiempojugado = 60 * 5;
+}
+
+void GamePlay1::setInmunidad()
+{
+    time_inmunidad = 0;
 }
 

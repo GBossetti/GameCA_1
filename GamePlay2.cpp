@@ -4,9 +4,7 @@
 
 GamePlay2::GamePlay2()
 {
-    vidas = 13;
-    tiempojugado = 60 * 10;
-    points = 0;
+    tiempojugado = 60 * 5;
     time_inmunidad = 0;
     juego_pausa = false;
     apreta_pausa = false;
@@ -32,6 +30,7 @@ int GamePlay2::Run(sf::RenderWindow& window)
     text_vida.setFont(font);
     text_game_over.setFont(font);
     text_pausa.setFont(font);
+    nombre.setFont(font);
 
     carpincho.respawn();
     camarada.respawn();
@@ -50,11 +49,11 @@ int GamePlay2::Run(sf::RenderWindow& window)
             //Key pressed
             if (Event.type == sf::Event::KeyPressed)
             {
-                switch (Event.key.code)
-                {
-                case sf::Keyboard::Escape:
-                    return (0);
-                    break;
+                //switch (Event.key.code)
+                //{
+                //case sf::Keyboard::Escape:
+                //    return (0);
+                //    break;
                 
                 case sf::Keyboard::Enter:
                     if (cambia_nivel) {
@@ -127,6 +126,7 @@ void GamePlay2::draw(sf::RenderTarget& target, sf::RenderStates states) const
     target.draw(camarada, states);
     target.draw(text, states);
     target.draw(text_vida, states);
+    target.draw(nombre, states);
 
     if (tiempojugado < 5) {
         target.draw(barrera, states);
@@ -232,10 +232,13 @@ void GamePlay2::juego()
 
 void GamePlay2::setTextos()
 {
-    text.setPosition(602, 0);
+    nombre.setPosition(602, 0);
+    nombre.setString(_nombre);
+
+    text.setPosition(602, 20);
     text.setString("PUNTOS: " + std::to_string(points));
 
-    text_vida.setPosition(602, 20);
+    text_vida.setPosition(602, 40);
     text_vida.setString("VIDAS: " + std::to_string(vidas));
 
     text_game_over.setPosition(250, 300);
@@ -273,6 +276,11 @@ int GamePlay2::getVidas()
     return vidas;
 }
 
+void GamePlay2::setPuntos(int puntos)
+{
+    points = puntos;
+}
+
 int GamePlay2::getPuntos()
 {
     return points;
@@ -286,6 +294,41 @@ bool GamePlay2::getCambiaNivel()
 void GamePlay2::setCambiaNivel()
 {
     cambia_nivel = false;
+}
+
+void GamePlay2::setValorInicial()
+{
+    setLlegada();
+    setTiempo();
+    barrera.setPosicionIni();
+    setInmunidad();
+    setGameOver();
+    setCambiaNivel();
+}
+
+void GamePlay2::setLlegada()
+{
+    llegada = false;
+}
+
+void GamePlay2::setTiempo()
+{
+    tiempojugado = 60 * 5;
+}
+
+void GamePlay2::setInmunidad()
+{
+    time_inmunidad = 0;
+}
+
+void GamePlay2::setGameOver()
+{
+    game_over = false;
+}
+
+void GamePlay2::setNombre(std::string nom)
+{
+    _nombre = nom;
 }
 
 void GamePlay2::setVidas(int vida)

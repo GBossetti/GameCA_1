@@ -1,2 +1,3 @@
 C:\Users\Gonzalo\Desktop\Projects\c++\GameCA_1-Menu\x64\Debug\juego_01.exe
 C:\Users\Gonzalo\Documents\GitHub\GameCA\x64\Debug\juego_01.exe
+C:\Users\usuario\Documents\GitHub\GameCA_1\x64\Debug\juego_01.exe

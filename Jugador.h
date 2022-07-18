@@ -9,7 +9,6 @@ private:
 	sf::String _playerInput;
 	sf::Text _pideNombre, _playerText;
 	bool ingreso;
-	int i;
 
 
 public:

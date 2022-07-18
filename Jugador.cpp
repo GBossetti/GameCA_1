@@ -2,7 +2,6 @@
 
 Jugador::Jugador()
 {
-	//i = 0;
 	ingreso = true;
 
 	//Cuadro de texto
@@ -58,7 +57,6 @@ bool Jugador::getIngreso()
 
 void Jugador::update()
 {
-	//_playerText.setString(_nombre);
 	_playerText.setString(_playerInput);
 }
 

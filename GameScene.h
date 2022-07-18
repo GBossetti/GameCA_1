@@ -3,6 +3,7 @@
 #include "GamePlay1.h"
 #include "GamePlay2.h"
 #include "GamePlay3.h"
+#include "Archivo.h"
 
 class GameScene : public cScreen
 {
@@ -13,11 +14,16 @@ private:
 
 	int _puntaje;
 	int _vidas;
+	char _nombre[50];
 
 
 public:
 	virtual int Run(sf::RenderWindow& window);
 	void setVidas(int vida);
-
+	void setPuntos(int puntos);
+	
+	void setNombre(std::string nombre);
+	std::string getNombre();
+	void Grabar();
 };
 

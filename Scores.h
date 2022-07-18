@@ -1,5 +1,6 @@
 #pragma once
 #include "cScreen.h"
+#include "Archivo.h"
 
 class Scores : public cScreen
 {
@@ -12,4 +13,6 @@ private:
 public:
     Scores();
     virtual int Run(sf::RenderWindow& window);
+
+    void MostrarPuntajes();
 };

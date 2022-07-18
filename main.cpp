@@ -4,7 +4,6 @@
 #include "Personaje.h"
 #include "Carpincho.h"
 #include "CarpinchoCopado.h"
-#include "Jugadorxs.h"
 #include "Pantallas.h"
 #include "Scores.h"
 #include "GameScene.h"
@@ -29,18 +28,6 @@ int main()
 
     Scores puntos;
     Screens.push_back(&puntos); //2
-
-    //Jugadorxs player;
-    //Screens.push_back(&player); // 3
-
-    //GamePlay1 gp1;
-    //Screens.push_back(&gp1); // 3
-    //
-    //GamePlay2 gp2;
-    //Screens.push_back(&gp2); // 4
-    //
-    //GamePlay3 gp3;
-    //Screens.push_back(&gp3); // 5
 
     GameScene game_scene;
     Screens.push_back(&game_scene); //3

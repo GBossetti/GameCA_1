@@ -30,16 +30,10 @@
     <ClCompile Include="Carpincho.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GamePlay.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Obstaculo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PopUp.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Jugadorxs.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Menu.cpp">
@@ -72,6 +66,9 @@
     <ClCompile Include="GameScene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Archivo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Personaje.h">
@@ -86,16 +83,10 @@
     <ClInclude Include="Carpincho.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GamePlay.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Obstaculo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="PopUp.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Jugadorxs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="cScreen.h">
@@ -132,6 +123,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GameScene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Archivo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

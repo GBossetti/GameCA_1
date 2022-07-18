@@ -4,15 +4,14 @@
 
 GamePlay3::GamePlay3()
 {
-    vidas = 13;
-    tiempojugado = 60 * 10;
-    points = 0;
+ 
+    tiempojugado = 60 * 5;
     time_inmunidad = 0;
     juego_pausa = false;
     apreta_pausa = false;
     game_over = false;
     llegada = false;
-    cambia_nivel = true;
+    cambia_nivel = false;
 }
 
 int GamePlay3::Run(sf::RenderWindow& window)
@@ -21,7 +20,7 @@ int GamePlay3::Run(sf::RenderWindow& window)
     bool Running = true;
     sf::RenderStates states; //Creo RenderState para poder dibujarlo
 
-    texture_fondo.loadFromFile("fondo22.png");
+    texture_fondo.loadFromFile("fondo3.png");
     image.setTexture(texture_fondo);
 
     font.loadFromFile("8bit.ttf");
@@ -30,6 +29,7 @@ int GamePlay3::Run(sf::RenderWindow& window)
     text_vida.setFont(font);
     text_game_over.setFont(font);
     text_pausa.setFont(font);
+    nombre.setFont(font);
 
     carpincho.respawn();
     camarada.respawn();
@@ -49,11 +49,11 @@ int GamePlay3::Run(sf::RenderWindow& window)
             //Key pressed
             if (Event.type == sf::Event::KeyPressed)
             {
-                switch (Event.key.code)
-                {
-                case sf::Keyboard::Escape:
-                    return (0);
-                    break;
+                //switch (Event.key.code)
+                //{
+                //case sf::Keyboard::Escape:
+                //    return (0);
+                //    break;
                
                 case sf::Keyboard::Enter:
                     if (cambia_nivel) {
@@ -128,9 +128,10 @@ void GamePlay3::draw(sf::RenderTarget& target, sf::RenderStates states) const
     target.draw(pelota, states);
     target.draw(text, states);
     target.draw(text_vida, states);
+    target.draw(nombre, states);
 
     if (tiempojugado < 5) {
-        //target.draw(barrera, states);
+        target.draw(barrera, states);
     }
 
     if (game_over) {
@@ -239,10 +240,13 @@ void GamePlay3::juego()
 
 void GamePlay3::setTextos()
 {
-    text.setPosition(602, 0);
+    nombre.setPosition(602, 0);
+    nombre.setString(_nombre);
+
+    text.setPosition(602, 20);
     text.setString("PUNTOS: " + std::to_string(points));
 
-    text_vida.setPosition(602, 20);
+    text_vida.setPosition(602, 40);
     text_vida.setString("VIDAS: " + std::to_string(vidas));
 
     text_game_over.setPosition(250, 300);
@@ -275,9 +279,19 @@ void GamePlay3::gameOver()
     }
 }
 
+void GamePlay3::setVidas(int vida)
+{
+    vidas = vida;
+}
+
 int GamePlay3::getVidas()
 {
     return vidas;
+}
+
+void GamePlay3::setPuntos(int puntos)
+{
+    points = puntos;
 }
 
 int GamePlay3::getPuntos()
@@ -293,6 +307,41 @@ bool GamePlay3::getCambiaNivel()
 void GamePlay3::setCambiaNivel()
 {
     cambia_nivel = false;
+}
+
+void GamePlay3::setValorInicial()
+{
+    setLlegada();
+    setTiempo();
+    barrera.setPosicionIni();
+    setInmunidad();
+    setGameOver();
+    setCambiaNivel();
+}
+
+void GamePlay3::setLlegada()
+{
+    llegada = false;
+}
+
+void GamePlay3::setTiempo()
+{
+    tiempojugado = 60 * 5;
+}
+
+void GamePlay3::setInmunidad()
+{
+    time_inmunidad = 0;
+}
+
+void GamePlay3::setGameOver()
+{
+    game_over = false;
+}
+
+void GamePlay3::setNombre(std::string nom)
+{
+    _nombre = nom;
 }
 
 
