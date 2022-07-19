@@ -25,7 +25,7 @@ private:
 	sf::Sprite image;
 	sf::Texture texture_fondo;
 	sf::Font font;
-	sf::Text text, text_vida, text_game_over, text_pausa, nombre;
+	sf::Text text, text_vida, text_game_over, text_pausa, nombre, text_final;
 
 	int vidas;
 	int tiempojugado;

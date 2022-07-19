@@ -30,6 +30,7 @@ int GamePlay3::Run(sf::RenderWindow& window)
     text_game_over.setFont(font);
     text_pausa.setFont(font);
     nombre.setFont(font);
+    text_final.setFont(font);
 
     carpincho.respawn();
     camarada.respawn();
@@ -49,8 +50,8 @@ int GamePlay3::Run(sf::RenderWindow& window)
             //Key pressed
             if (Event.type == sf::Event::KeyPressed)
             {
-                //switch (Event.key.code)
-                //{
+                switch (Event.key.code)
+                {
                 //case sf::Keyboard::Escape:
                 //    return (0);
                 //    break;
@@ -144,6 +145,7 @@ void GamePlay3::draw(sf::RenderTarget& target, sf::RenderStates states) const
 
     if (llegada) {
         target.draw(popup, states);
+        target.draw(text_final, states);
     }
 }
 
@@ -254,6 +256,9 @@ void GamePlay3::setTextos()
 
     text_pausa.setPosition(250, 300);
     text_pausa.setString("PAUSA");
+    
+    text_final.setPosition(300, 100);
+    text_final.setString("JUEGO TERMINADO");
 }
 
 void GamePlay3::pausa()

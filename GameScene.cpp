@@ -19,7 +19,7 @@ int GameScene::Run(sf::RenderWindow& window)
                 return (-1);
             }
             //Key pressed
-            if (Event.type == sf::Event::KeyPressed)
+            /*if (Event.type == sf::Event::KeyPressed)
             {
                 switch (Event.key.code)
                 {
@@ -30,7 +30,7 @@ int GameScene::Run(sf::RenderWindow& window)
                 default:
                     break;
                 }
-            }
+            }*/
         }
     
 	    while (!gp1.getCambiaNivel()) {
@@ -60,7 +60,12 @@ int GameScene::Run(sf::RenderWindow& window)
             gp3.update();
 	    }
 
+        setPuntos(gp3.getPuntos()); //para guardar puntos una vez finaliza gp3
+
         // GRABAMOS PUNTAJE Y NOMBRE EN DISCO
+        std::cout << "Puntos" << _puntaje << std::endl;
+        std::cout << "Nombre" << _nombre;
+        
         Grabar();
 
         // SETEAMOS A CERO LOS GP

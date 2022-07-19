@@ -49,11 +49,11 @@ int GamePlay2::Run(sf::RenderWindow& window)
             //Key pressed
             if (Event.type == sf::Event::KeyPressed)
             {
-                //switch (Event.key.code)
-                //{
+                switch (Event.key.code)
+                {
                 //case sf::Keyboard::Escape:
-                //    return (0);
-                //    break;
+                //   return (0);
+                //   break;
                 
                 case sf::Keyboard::Enter:
                     if (cambia_nivel) {

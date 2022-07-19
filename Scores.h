@@ -6,7 +6,7 @@ class Scores : public cScreen
 {
 private:
     sf::Font _font;
-    sf::Text nombre1, nombre2;
+    sf::Text nombre1, nombre2, primero, segundo;
     sf::Sprite _backgroundcred;
     sf::Texture _texturecred;
 
@@ -16,3 +16,6 @@ public:
 
     void MostrarPuntajes();
 };
+
+void cargarVector(Archivo* v, int cant);
+void ordenarVector(Archivo* v, int cant);

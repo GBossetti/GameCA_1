@@ -19,6 +19,8 @@ int Scores::Run(sf::RenderWindow& window)
     nombre1.setString("PRIMER MEJOR PUNTAJE");
     nombre2.setString("SEUNDO MEJOR PUNTAJE");
 
+    MostrarPuntajes();
+
     sf::Event Event;
     bool Running = true;
 
@@ -48,6 +50,8 @@ int Scores::Run(sf::RenderWindow& window)
         window.draw(_backgroundcred);
         window.draw(nombre1);
         window.draw(nombre2);
+        window.draw(primero);
+        window.draw(segundo);
 
         window.display();
 
@@ -66,21 +70,56 @@ void Scores::MostrarPuntajes()
     vPuntajes = new Archivo[cantReg];
     if (vPuntajes == NULL) return;
 
-    for (int i = 0; i < cantReg; i++) {
-        reg.LeerDeDisco(i);
-        vPuntajes[i].setNombre(reg.getNombre());
-        vPuntajes[i].setPuntos(reg.getPuntos());
-    }
+    cargarVector(vPuntajes, cantReg);
+    ordenarVector(vPuntajes, cantReg);
 
-    Archivo aux;
-    for (int i = 0; i < cantReg - 1; i++) {
-        for (int j = i + 1; j < cantReg; j++) {
-            if (vPuntajes[i].getPuntos() > vPuntajes[j].getPuntos()) {
-                aux = vPuntajes[i];
-                vPuntajes[i] = vPuntajes[j];
-                vPuntajes[j] = aux;
+    int cantRegMostrar = 2;
+    int punto1 = 0, punto2 = 0;
+
+    for (int i = 0; i < cantRegMostrar; i++) {
+        if (punto1 == 0) {
+            punto1 = vPuntajes[i].getPuntos();
+        }
+        else {
+            if (punto2 == 0) {
+                punto2 = vPuntajes[i].getPuntos();
             }
+        }
     }
+    
+    primero.setFont(_font);
+    primero.setPosition(300, 200);
+    primero.setFillColor(sf::Color::White);
+    primero.setString("PUNTOS: " + std::to_string(punto1));
+
+    segundo.setFont(_font);
+    segundo.setPosition(300, 250);
+    segundo.setFillColor(sf::Color::White);
+    segundo.setString("PUNTOS: " + std::to_string(punto2));
+
 
     delete vPuntajes;
+}
+
+void cargarVector(Archivo* v, int cant) {
+    Archivo reg;
+
+    for (int i = 0; i < cant; i++) {
+        reg.LeerDeDisco(i);
+        v[i].setNombre(reg.getNombre());
+        v[i].setPuntos(reg.getPuntos());
+    }
+}
+
+void ordenarVector(Archivo* v, int cant) {
+    Archivo aux;
+    for (int i = 0; i < cant - 1; i++) {
+        for (int j = i + 1; j < cant; j++) {
+            if (v[i].getPuntos() > v[j].getPuntos()) {
+                aux = v[i];
+                v[i] = v[j];
+                v[j] = aux;
+            }
+        }
+    }
 }

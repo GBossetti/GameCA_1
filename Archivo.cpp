@@ -21,7 +21,7 @@ bool Archivo::LeerDeDisco(int pos)
     p = fopen("puntajes.dat", "rb");
     if (p == NULL) return false;
     fseek(p, sizeof(Archivo) * pos, 0);
-    leyo = fread(this, sizeof(Archivo), 1, 0);
+    leyo = fread(this, sizeof(Archivo), 1, p);
     fclose(p);
     return leyo;
 }
