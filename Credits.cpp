@@ -26,10 +26,10 @@ int Credits::Run(sf::RenderWindow& window)
     {
         while (window.pollEvent(Event))
         {
-            //if (Event.type == sf::Event::Closed)
-            //{
-            //    return (-1);
-            //}
+            if (Event.type == sf::Event::Closed)
+            {
+                window.close();
+            }
 
             if (Event.type == sf::Event::KeyPressed)
             {
@@ -44,15 +44,11 @@ int Credits::Run(sf::RenderWindow& window)
         }
 
         window.clear();
-
         window.draw(_backgroundcred);
         window.draw(nombre1);
         window.draw(nombre2);
-
         window.display();
-
     }
-
 
 	return (-1);
 }

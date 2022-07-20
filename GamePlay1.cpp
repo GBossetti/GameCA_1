@@ -13,10 +13,6 @@ GamePlay1::GamePlay1()
     game_over = false;
     llegada = false;
     cambia_nivel = false;
-
-    //ingreso_nombre = true;
-    //bandera = true;
-
     escape = false;
 }
 
@@ -25,32 +21,24 @@ int GamePlay1::Run(sf::RenderWindow& window)
     sf::Event Event;
     bool Running = true;
     sf::RenderStates states;
-
     texture_fondo.loadFromFile("ruta.png");
     image.setTexture(texture_fondo);
-
     font.loadFromFile("8bit.ttf");
-
     text.setFont(font);
     text_vida.setFont(font);
     text_game_over.setFont(font);
     text_pausa.setFont(font);
-    nombre.setFont(font);
-
     carpincho.respawn();
     camarada.respawn();
 
     while (Running)
     {
-        //Verifying events
         while (window.pollEvent(Event))
         {
-            // Window closed
             if (Event.type == sf::Event::Closed)
             {
                 window.close();
             }
-            //Key pressed
             if (Event.type == sf::Event::KeyPressed)
             {
                 switch (Event.key.code)
@@ -70,20 +58,8 @@ int GamePlay1::Run(sf::RenderWindow& window)
                     break;
                 }
             }
-            //if (!ingreso_nombre && Event.type == sf::Event::TextEntered)
-            //{
-            //    player.cargarNombre(static_cast<char>(Event.text.unicode));
-            //    //player.update();
-            //    std::cout << "ASCII character typed: " << static_cast<char>(Event.text.unicode) << std::endl;
-            //    
-            //    if (Event.text.unicode == 13 && !bandera) {
-            //        ingreso_nombre = true;
-            //    }
-            //    bandera = false;
-            //}
         }
 
-        //Updating
         aceleracion();
         juego();
         setTextos();
@@ -91,24 +67,17 @@ int GamePlay1::Run(sf::RenderWindow& window)
         gameOver();
         update();
 
-        //Clearing screen
         window.clear(sf::Color::Black);
 
-        //Drawing
         draw(window, states);
         window.display();
     }
 
-    //Never reaching this point normally, but just in case, exit the application
     return -1;
 }
 
 void GamePlay1::update()
 {
-    //if (!ingreso_nombre) {
-        //player.update();
-    //}
-
     if (!game_over && !llegada && !juego_pausa) {
         repartidor.update();
         carpincho.update();
@@ -128,36 +97,29 @@ void GamePlay1::update()
 
 void GamePlay1::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
-    //if (!ingreso_nombre) {
-        //target.draw(player, states);
-    //}
-    
-    //else {
-        target.draw(image, states);
-        target.draw(repartidor, states);
-        target.draw(carpincho, states);
-        target.draw(camarada, states);
-        target.draw(text, states);
-        target.draw(text_vida, states);
-        target.draw(nombre, states);
+    target.draw(image, states);
+    target.draw(repartidor, states);
+    target.draw(carpincho, states);
+    target.draw(camarada, states);
+    target.draw(text, states);
+    target.draw(text_vida, states);
 
-        if (tiempojugado < 5) {
-            target.draw(barrera, states);
-        }
-
-        if (game_over) {
-            target.draw(text_game_over, states);
-        }
-
-        if (juego_pausa) {
-            target.draw(text_pausa, states);
-        }
-
-        if (llegada) {
-            target.draw(popup, states);
-        }
+    if (tiempojugado < 5) {
+        target.draw(barrera, states);
     }
-//}
+
+    if (game_over) {
+        target.draw(text_game_over, states);
+    }
+
+    if (juego_pausa) {
+        target.draw(text_pausa, states);
+    }
+
+    if (llegada) {
+        target.draw(popup, states);
+    }
+}
 
 void GamePlay1::aceleracion()
 {
@@ -213,7 +175,6 @@ void GamePlay1::juego()
         repartidor.setTransparencia(repartidor.getInmunidad());
 
         if (repartidor.isCollision(barrera)) {
-            std::cout << "prueba2";
             llegada = true;
         }
 
@@ -235,13 +196,10 @@ void GamePlay1::juego()
 
 void GamePlay1::setTextos()
 {
-    //nombre.setPosition(602, 0);
-    //nombre.setString(player.getNombre());
-
-    text.setPosition(602, 20);
+    text.setPosition(602, 0);
     text.setString("PUNTOS: " + std::to_string(points));
 
-    text_vida.setPosition(602, 40);
+    text_vida.setPosition(602, 20);
     text_vida.setString("VIDAS: " + std::to_string(vidas));
 
     text_game_over.setPosition(250, 300);
@@ -274,20 +232,10 @@ void GamePlay1::gameOver()
     }
 }
 
-//std::string GamePlay1::getNombre()
-//{
-//    return player.getNombre();
-//}
-
 void GamePlay1::setGameOver()
 {
     game_over = false;
 }
-
-//void GamePlay1::setIngresoNombre()
-//{
-//    ingreso_nombre = false;
-//}
 
 void GamePlay1::setEscape()
 {
@@ -339,7 +287,6 @@ void GamePlay1::setValorInicial()
     setInmunidad();
     setGameOver();
     setCambiaNivel();
-    //setIngresoNombre();
     setEscape();
 
 }

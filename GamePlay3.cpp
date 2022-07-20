@@ -11,7 +11,6 @@ GamePlay3::GamePlay3()
     game_over = false;
     llegada = false;
     cambia_nivel = false;
-
     escape = false;
 }
 
@@ -19,20 +18,15 @@ int GamePlay3::Run(sf::RenderWindow& window)
 {
     sf::Event Event;
     bool Running = true;
-    sf::RenderStates states; //Creo RenderState para poder dibujarlo
-
+    sf::RenderStates states;
     texture_fondo.loadFromFile("fondo3.png");
     image.setTexture(texture_fondo);
-
     font.loadFromFile("8bit.ttf");
-
     text.setFont(font);
     text_vida.setFont(font);
     text_game_over.setFont(font);
     text_pausa.setFont(font);
-    nombre.setFont(font);
     text_final.setFont(font);
-
     carpincho.respawn();
     camarada.respawn();
     heavy.respawn();
@@ -40,15 +34,12 @@ int GamePlay3::Run(sf::RenderWindow& window)
 
     while (Running)
     {
-        //Verifying events
         while (window.pollEvent(Event))
         {
-            // Window closed
             if (Event.type == sf::Event::Closed)
             {
                 window.close();
             }
-            //Key pressed
             if (Event.type == sf::Event::KeyPressed)
             {
                 switch (Event.key.code)
@@ -70,7 +61,6 @@ int GamePlay3::Run(sf::RenderWindow& window)
             }
         }
 
-        //Updating
         aceleracion();
         juego();
         setTextos();
@@ -78,15 +68,12 @@ int GamePlay3::Run(sf::RenderWindow& window)
         gameOver();
         update();
 
-        //Clearing screen
         window.clear(sf::Color::Black);
 
-        //Drawing
         draw(window, states);
         window.display();
     }
 
-    //Never reaching this point normally, but just in case, exit the application
     return -1;
 }
 
@@ -132,7 +119,6 @@ void GamePlay3::draw(sf::RenderTarget& target, sf::RenderStates states) const
     target.draw(pelota, states);
     target.draw(text, states);
     target.draw(text_vida, states);
-    target.draw(nombre, states);
 
     if (tiempojugado < 5) {
         target.draw(barrera, states);
@@ -245,13 +231,10 @@ void GamePlay3::juego()
 
 void GamePlay3::setTextos()
 {
-    //nombre.setPosition(602, 0);
-    //nombre.setString(_nombre);
-
-    text.setPosition(602, 20);
+    text.setPosition(602, 0);
     text.setString("PUNTOS: " + std::to_string(points));
 
-    text_vida.setPosition(602, 40);
+    text_vida.setPosition(602, 20);
     text_vida.setString("VIDAS: " + std::to_string(vidas));
 
     text_game_over.setPosition(250, 300);
@@ -347,12 +330,6 @@ void GamePlay3::setGameOver()
 {
     game_over = false;
 }
-
-//void GamePlay3::setNombre(std::string nom)
-//{
-//    _nombre = nom;
-//}
-
 
 void GamePlay3::setEscape()
 {

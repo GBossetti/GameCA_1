@@ -11,11 +11,10 @@ protected:
 	sf::RectangleShape _body;
 public: 
 	Obstaculo();
+	sf::FloatRect getBounds() const override;
 	void setVelocity(sf::Vector2f);
 	void update();
 	void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
-	sf::FloatRect getBounds() const override;
-
 	void setPosicionIni();
 
 };

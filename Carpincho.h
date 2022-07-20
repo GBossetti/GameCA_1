@@ -6,8 +6,6 @@
 
 class Carpincho : public Obstaculo
 {
-private:
-	//sf::Sprite _sprite;
 public:
 	Carpincho();
 	void update();

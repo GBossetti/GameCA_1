@@ -8,7 +8,6 @@
 #include "PopUp.h"
 #include "CarpinchoHeavy.h"
 #include "Golf.h"
-#include "Jugador.h"
 
 
 class GamePlay3 : public sf::Drawable, public cScreen
@@ -22,13 +21,11 @@ private:
 	Golf pelota;
 	PopUp popup;
 
-	//Jugador player;
-
 	std::string _nombre;
 	sf::Sprite image;
 	sf::Texture texture_fondo;
 	sf::Font font;
-	sf::Text text, text_vida, text_game_over, text_pausa, nombre, text_final;
+	sf::Text text, text_vida, text_game_over, text_pausa, text_final;
 
 	int vidas;
 	int tiempojugado;
@@ -39,15 +36,14 @@ private:
 	bool game_over;
 	bool llegada;
 	bool cambia_nivel;
-
-	//bool ingreso_nombre;
-	//bool bandera;
-
 	bool escape;
 
 public:
 	GamePlay3();
 	virtual int Run(sf::RenderWindow& window);
+	int getVidas();
+	int getPuntos();
+	bool getCambiaNivel();
 	void update();
 	void setTextos();
 	void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
@@ -55,26 +51,15 @@ public:
 	void juego();
 	void pausa();
 	void gameOver();
-
 	void setVidas(int vida);
-	int getVidas();
-
 	void setPuntos(int puntos);
-	int getPuntos();
-
-	bool getCambiaNivel();
 	void setCambiaNivel();
-
 	void setValorInicial();
 	void setLlegada();
 	void setTiempo();
 	void setInmunidad();
 	void setGameOver();
-
-	//void setNombre(std::string nom);
-
 	void setEscape();
 	bool getEscape();
-
 };
 

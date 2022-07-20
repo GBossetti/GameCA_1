@@ -24,7 +24,7 @@ void CarpinchoCopado::draw(sf::RenderTarget& target, sf::RenderStates states) co
 
 void CarpinchoCopado::respawn() 
 {
-	_sprite.setPosition((std::rand() % 200) + 150 + _sprite.getLocalBounds().width, -100 - (std::rand() % 300));
+	_sprite.setPosition((std::rand() % 200) + 150 + _sprite.getLocalBounds().width, -300 - (std::rand() % 300));
 }
 
 sf::FloatRect CarpinchoCopado::getBounds() const

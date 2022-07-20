@@ -12,7 +12,6 @@ int Menu::Run(sf::RenderWindow& window)
 {   
     sf::Event Event;
     bool Running = true;
-    
 
     _textureback.loadFromFile("backmenu.png");
     _background.setTexture(_textureback);

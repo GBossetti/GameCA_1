@@ -15,7 +15,6 @@ public:
 	PopUp();
 	void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
 	void update();
-
 	void setPuntos(int p);
 	void setVidas(int v);
 };

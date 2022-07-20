@@ -157,7 +157,6 @@
     <ClCompile Include="GamePlay3.cpp" />
     <ClCompile Include="GameScene.cpp" />
     <ClCompile Include="Golf.cpp" />
-    <ClCompile Include="Jugador.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="Obstaculo.cpp" />
@@ -178,16 +177,12 @@
     <ClInclude Include="GamePlay3.h" />
     <ClInclude Include="GameScene.h" />
     <ClInclude Include="Golf.h" />
-    <ClInclude Include="Jugador.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="Obstaculo.h" />
     <ClInclude Include="Pantallas.h" />
     <ClInclude Include="Personaje.h" />
     <ClInclude Include="PopUp.h" />
     <ClInclude Include="Scores.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

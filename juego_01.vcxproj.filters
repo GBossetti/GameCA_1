@@ -60,9 +60,6 @@
     <ClCompile Include="Scores.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Jugador.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="GameScene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -119,17 +116,11 @@
     <ClInclude Include="Scores.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Jugador.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="GameScene.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Archivo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>

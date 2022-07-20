@@ -19,11 +19,10 @@ private:
 	Obstaculo barrera;
 	PopUp popup;
 
-	//std::string _nombre;
 	sf::Sprite image;
 	sf::Texture texture_fondo;
 	sf::Font font;
-	sf::Text text, text_vida, text_game_over, text_pausa, nombre;
+	sf::Text text, text_vida, text_game_over, text_pausa;
 
 	int vidas;
 	int tiempojugado;
@@ -34,12 +33,13 @@ private:
 	bool game_over;
 	bool llegada;
 	bool cambia_nivel;
-
 	bool escape;
 
 public:
 	GamePlay2();
 	virtual int Run(sf::RenderWindow& window);
+	int getVidas();
+	int getPuntos();
 	void update();
 	void setTextos();
 	void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
@@ -47,24 +47,15 @@ public:
 	void juego();
 	void pausa();
 	void gameOver();
-	
 	void setVidas(int vida);
-	int getVidas();
-	
 	void setPuntos(int puntos);
-	int getPuntos();
-
 	bool getCambiaNivel();
 	void setCambiaNivel();
-
 	void setValorInicial();
 	void setLlegada();
 	void setTiempo();
 	void setInmunidad();
 	void setGameOver();
-
-	//void setNombre(std::string nom);
-
 	void setEscape();
 	bool getEscape();
 };
