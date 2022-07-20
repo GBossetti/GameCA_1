@@ -4,6 +4,7 @@
 #include "GamePlay2.h"
 #include "GamePlay3.h"
 #include "Archivo.h"
+#include "Jugador.h"
 
 class GameScene : public cScreen
 {
@@ -11,10 +12,14 @@ private:
 	GamePlay1 gp1;
 	GamePlay2 gp2;
 	GamePlay3 gp3;
+	Jugador player;
 
 	int _puntaje;
 	int _vidas;
 	char _nombre[50];
+
+	bool ingresaNombre;
+	bool bandera;
 
 
 public:

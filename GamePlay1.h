@@ -18,7 +18,7 @@ private:
 	CarpinchoCopado camarada;
 	Obstaculo barrera;
 	PopUp popup;
-	Jugador player;
+	//Jugador player;
 
 	sf::Sprite image;
 	sf::Texture texture_fondo;
@@ -35,8 +35,10 @@ private:
 	bool llegada;
 	bool cambia_nivel;
 
-	bool ingreso_nombre;
-	bool bandera;
+	//bool ingreso_nombre;
+	//bool bandera;
+
+	bool escape;
 
 public:
 	GamePlay1();
@@ -49,7 +51,7 @@ public:
 	void pausa();
 	void gameOver();
 	
-	std::string getNombre();
+	//std::string getNombre();
 
 	void setVidas();
 	int getVidas();
@@ -65,6 +67,9 @@ public:
 	void setTiempo();
 	void setInmunidad();
 	void setGameOver();
-	void setIngresoNombre();
+	//void setIngresoNombre();
+
+	void setEscape();
+	bool getEscape();
 };
 

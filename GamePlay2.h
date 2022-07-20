@@ -19,7 +19,7 @@ private:
 	Obstaculo barrera;
 	PopUp popup;
 
-	std::string _nombre;
+	//std::string _nombre;
 	sf::Sprite image;
 	sf::Texture texture_fondo;
 	sf::Font font;
@@ -34,6 +34,8 @@ private:
 	bool game_over;
 	bool llegada;
 	bool cambia_nivel;
+
+	bool escape;
 
 public:
 	GamePlay2();
@@ -61,8 +63,9 @@ public:
 	void setInmunidad();
 	void setGameOver();
 
-	void setNombre(std::string nom);
-	
+	//void setNombre(std::string nom);
 
+	void setEscape();
+	bool getEscape();
 };
 

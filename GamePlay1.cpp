@@ -4,7 +4,7 @@
 
 GamePlay1::GamePlay1()
 {
-    vidas = 3;
+    vidas = 1;
     tiempojugado = 60 * 5;
     points = 0;
     time_inmunidad = 0;
@@ -14,8 +14,10 @@ GamePlay1::GamePlay1()
     llegada = false;
     cambia_nivel = false;
 
-    ingreso_nombre = false;
-    bandera = true;
+    //ingreso_nombre = true;
+    //bandera = true;
+
+    escape = false;
 }
 
 int GamePlay1::Run(sf::RenderWindow& window)
@@ -53,14 +55,14 @@ int GamePlay1::Run(sf::RenderWindow& window)
             {
                 switch (Event.key.code)
                 {
-                //case sf::Keyboard::Escape:
-                //   return (0);
-                //   break;
+                case sf::Keyboard::Escape:
+                   escape = true;
+                   return 0;
+                   break;
 
                 case sf::Keyboard::Enter:
                     if (cambia_nivel) {
-                        return true; //4 es GamePlay2
-
+                        return 0; 
                     }
                     break;
 
@@ -68,20 +70,17 @@ int GamePlay1::Run(sf::RenderWindow& window)
                     break;
                 }
             }
-            
-
-            if (!ingreso_nombre && Event.type == sf::Event::TextEntered)
-            {
-                player.cargarNombre(static_cast<char>(Event.text.unicode));
-                //player.update();
-                std::cout << "ASCII character typed: " << static_cast<char>(Event.text.unicode) << std::endl;
-                
-                if (Event.text.unicode == 13 && !bandera) {
-                    ingreso_nombre = true;
-                }
-                bandera = false;
-            }
-            
+            //if (!ingreso_nombre && Event.type == sf::Event::TextEntered)
+            //{
+            //    player.cargarNombre(static_cast<char>(Event.text.unicode));
+            //    //player.update();
+            //    std::cout << "ASCII character typed: " << static_cast<char>(Event.text.unicode) << std::endl;
+            //    
+            //    if (Event.text.unicode == 13 && !bandera) {
+            //        ingreso_nombre = true;
+            //    }
+            //    bandera = false;
+            //}
         }
 
         //Updating
@@ -106,9 +105,9 @@ int GamePlay1::Run(sf::RenderWindow& window)
 
 void GamePlay1::update()
 {
-    if (!ingreso_nombre) {
-        player.update();
-    }
+    //if (!ingreso_nombre) {
+        //player.update();
+    //}
 
     if (!game_over && !llegada && !juego_pausa) {
         repartidor.update();
@@ -129,11 +128,11 @@ void GamePlay1::update()
 
 void GamePlay1::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
-    if (!ingreso_nombre) {
-        target.draw(player, states);
-    }
+    //if (!ingreso_nombre) {
+        //target.draw(player, states);
+    //}
     
-    else {
+    //else {
         target.draw(image, states);
         target.draw(repartidor, states);
         target.draw(carpincho, states);
@@ -158,9 +157,7 @@ void GamePlay1::draw(sf::RenderTarget& target, sf::RenderStates states) const
             target.draw(popup, states);
         }
     }
-
-
-}
+//}
 
 void GamePlay1::aceleracion()
 {
@@ -238,9 +235,8 @@ void GamePlay1::juego()
 
 void GamePlay1::setTextos()
 {
-    nombre.setPosition(602, 0);
-    nombre.setString(player.getNombre());
-
+    //nombre.setPosition(602, 0);
+    //nombre.setString(player.getNombre());
 
     text.setPosition(602, 20);
     text.setString("PUNTOS: " + std::to_string(points));
@@ -253,7 +249,6 @@ void GamePlay1::setTextos()
 
     text_pausa.setPosition(250, 300);
     text_pausa.setString("PAUSA");
-
 }
 
 void GamePlay1::pausa()
@@ -279,24 +274,34 @@ void GamePlay1::gameOver()
     }
 }
 
-std::string GamePlay1::getNombre()
-{
-    return player.getNombre();
-}
+//std::string GamePlay1::getNombre()
+//{
+//    return player.getNombre();
+//}
 
 void GamePlay1::setGameOver()
 {
     game_over = false;
 }
 
-void GamePlay1::setIngresoNombre()
+//void GamePlay1::setIngresoNombre()
+//{
+//    ingreso_nombre = false;
+//}
+
+void GamePlay1::setEscape()
 {
-    ingreso_nombre = false;
+    escape = false;
+}
+
+bool GamePlay1::getEscape()
+{
+    return escape;
 }
 
 void GamePlay1::setVidas()
 {
-    vidas = 3;
+    vidas = 1;
 }
 
 int GamePlay1::getVidas()
@@ -334,7 +339,8 @@ void GamePlay1::setValorInicial()
     setInmunidad();
     setGameOver();
     setCambiaNivel();
-    setIngresoNombre();
+    //setIngresoNombre();
+    setEscape();
 
 }
 

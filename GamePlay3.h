@@ -8,6 +8,7 @@
 #include "PopUp.h"
 #include "CarpinchoHeavy.h"
 #include "Golf.h"
+#include "Jugador.h"
 
 
 class GamePlay3 : public sf::Drawable, public cScreen
@@ -20,6 +21,8 @@ private:
 	Obstaculo barrera;
 	Golf pelota;
 	PopUp popup;
+
+	//Jugador player;
 
 	std::string _nombre;
 	sf::Sprite image;
@@ -36,6 +39,11 @@ private:
 	bool game_over;
 	bool llegada;
 	bool cambia_nivel;
+
+	//bool ingreso_nombre;
+	//bool bandera;
+
+	bool escape;
 
 public:
 	GamePlay3();
@@ -63,7 +71,10 @@ public:
 	void setInmunidad();
 	void setGameOver();
 
-	void setNombre(std::string nom);
+	//void setNombre(std::string nom);
+
+	void setEscape();
+	bool getEscape();
 
 };
 

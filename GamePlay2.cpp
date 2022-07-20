@@ -12,6 +12,7 @@ GamePlay2::GamePlay2()
     llegada = false;
     cambia_nivel = false;
 
+    escape = false;
 }
 
 int GamePlay2::Run(sf::RenderWindow& window)
@@ -44,23 +45,24 @@ int GamePlay2::Run(sf::RenderWindow& window)
             // Window closed
             if (Event.type == sf::Event::Closed)
             {
-                return (-1);
+                window.close();
             }
             //Key pressed
             if (Event.type == sf::Event::KeyPressed)
             {
                 switch (Event.key.code)
                 {
-                //case sf::Keyboard::Escape:
-                //   return (0);
-                //   break;
-                
+                case sf::Keyboard::Escape:
+                    escape = true;
+                    return 0;
+                    break;
+
                 case sf::Keyboard::Enter:
                     if (cambia_nivel) {
-                        return(5); //5 es GamePlay3
+                        return 0;
                     }
-                    break;  
-                
+                    break;
+
                 default:
                     break;
                 }
@@ -232,8 +234,8 @@ void GamePlay2::juego()
 
 void GamePlay2::setTextos()
 {
-    nombre.setPosition(602, 0);
-    nombre.setString(_nombre);
+    //nombre.setPosition(602, 0);
+    //nombre.setString(_nombre);
 
     text.setPosition(602, 20);
     text.setString("PUNTOS: " + std::to_string(points));
@@ -304,6 +306,7 @@ void GamePlay2::setValorInicial()
     setInmunidad();
     setGameOver();
     setCambiaNivel();
+    setEscape();
 }
 
 void GamePlay2::setLlegada()
@@ -326,14 +329,22 @@ void GamePlay2::setGameOver()
     game_over = false;
 }
 
-void GamePlay2::setNombre(std::string nom)
-{
-    _nombre = nom;
-}
+//void GamePlay2::setNombre(std::string nom)
+//{
+//    _nombre = nom;
+//}
 
 void GamePlay2::setVidas(int vida)
 {
     vidas = vida;
 }
 
+void GamePlay2::setEscape()
+{
+    escape = false;
+}
 
+bool GamePlay2::getEscape()
+{
+    return escape;
+}
