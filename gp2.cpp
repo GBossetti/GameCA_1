@@ -123,7 +123,7 @@ void GamePlay2::juego()
         if (repartidor.getInmunidad()) {
             time_inmunidad++;
         }
-        if (repartidor.getInmunidad() && time_inmunidad == 60 * 3) {
+        if (repartidor.getInmunidad() && time_inmunidad == 60 * 5) {
             repartidor.setInmunidad(false);
         }
         if (repartidor.isCollision(carpincho)) {
@@ -217,48 +217,4 @@ int GamePlay2::getPuntos()
     return points;
 }
 
-<<<<<<< Updated upstream:gp2.cpp
-=======
-bool GamePlay2::getCambiaNivel()
-{
-    return cambia_nivel;
-}
-
-void GamePlay2::setCambiaNivel()
-{
-    cambia_nivel = false;
-}
-
-void GamePlay2::setValorInicial()
-{
-    setLlegada();
-    setTiempo();
-    barrera.setPosicionIni();
-    setInmunidad();
-    setGameOver();
-    setCambiaNivel();
-    setEscape();
-    repartidor.setInmunidad(false);
-}
-
-void GamePlay2::setLlegada()
-{
-    llegada = false;
-}
-
-void GamePlay2::setTiempo()
-{
-    tiempojugado = 60 * 5;
-}
-
-void GamePlay2::setInmunidad()
-{
-    time_inmunidad = 0;
-}
-
-void GamePlay2::setGameOver()
-{
-    game_over = false;
-}
->>>>>>> Stashed changes:GamePlay2.cpp
 

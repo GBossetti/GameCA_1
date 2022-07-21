@@ -194,46 +194,4 @@ int GamePlay1::getPuntos()
     return points;
 }
 
-<<<<<<< Updated upstream:gp1.cpp
-=======
-bool GamePlay1::getCambiaNivel()
-{
-    return cambia_nivel;
-}
-
-void GamePlay1::setCambiaNivel()
-{
-    cambia_nivel = false;
-}
-
-void GamePlay1::setValorInicial()
-{
-    setVidas();
-    setPuntos();
-    setLlegada();
-    setTiempo();
-    barrera.setPosicionIni();
-    setInmunidad();
-    setGameOver();
-    setCambiaNivel();
-    setEscape();
-    repartidor.setInmunidad(false);
-
-}
-
-void GamePlay1::setLlegada()
-{
-    llegada = false;
-}
-
-void GamePlay1::setTiempo()
-{
-    tiempojugado = 60 * 5;
-}
-
-void GamePlay1::setInmunidad()
-{
-    time_inmunidad = 0;
-}
->>>>>>> Stashed changes:GamePlay1.cpp
 

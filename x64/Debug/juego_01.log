@@ -1,10 +1,5 @@
-<<<<<<< Updated upstream
 ﻿  Jugadorxs.cpp
 C:\Users\Gonzalo\Documents\GitHub\GameCA\Jugadorxs.cpp(42,39): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   main.cpp
   Generating Code...
   juego_01.vcxproj -> C:\Users\Gonzalo\Documents\GitHub\GameCA\x64\Debug\juego_01.exe
-=======
-﻿  GameScene.cpp
-  juego_01.vcxproj -> C:\Users\usuario\Documents\GitHub\GameCA_1\x64\Debug\juego_01.exe
->>>>>>> Stashed changes
