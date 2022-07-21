@@ -1,4 +1,5 @@
 #include "Archivo.h"
+#include <iostream>
 
 bool Archivo::GrabarEnDisco()
 {
@@ -10,7 +11,7 @@ bool Archivo::GrabarEnDisco()
 
     grabo = fwrite(this, sizeof(Archivo), 1, p);
     fclose(p);
-
+    std::cout << "GrabarEnDisco";
     return grabo;
 }
 
@@ -30,7 +31,7 @@ int Archivo::ContarRegistros()
 {
     FILE* p;
     int cantReg, bytes;
-    p = fopen("puntaje.dat", "rb");
+    p = fopen("puntajes.dat", "rb");
     if (p == NULL) return 0;
 
     fseek(p, 0, 2);
@@ -46,17 +47,9 @@ void Archivo::setPuntos(int p)
     _puntos = p;
 }
 
-void Archivo::setNombre(const char* n)
-{
-    strcpy(_nombre, n);
-}
 
 int Archivo::getPuntos()
 {
     return _puntos;
 }
 
-const char* Archivo::getNombre()
-{
-    return _nombre;
-}

@@ -4,7 +4,7 @@
 
 GamePlay3::GamePlay3()
 {
-    tiempojugado = 60 * 5;
+    tiempojugado = 60 * 30;
     time_inmunidad = 0;
     juego_pausa = false;
     apreta_pausa = false;
@@ -176,7 +176,7 @@ void GamePlay3::juego()
         if (repartidor.getInmunidad()) {
             time_inmunidad++;
         }
-        if (repartidor.getInmunidad() && time_inmunidad == 60 * 5) {
+        if (repartidor.getInmunidad() && time_inmunidad == 60 * 1) {
             repartidor.setInmunidad(false);
         }
         if (repartidor.isCollision(carpincho)) {
@@ -243,7 +243,7 @@ void GamePlay3::setTextos()
     text_pausa.setPosition(250, 300);
     text_pausa.setString("PAUSA");
     
-    text_final.setPosition(300, 100);
+    text_final.setPosition(200, 200);
     text_final.setString("JUEGO TERMINADO");
 }
 
@@ -309,6 +309,7 @@ void GamePlay3::setValorInicial()
     setGameOver();
     setCambiaNivel();
     setEscape();
+    repartidor.setInmunidad(false);
 }
 
 void GamePlay3::setLlegada()
@@ -318,7 +319,7 @@ void GamePlay3::setLlegada()
 
 void GamePlay3::setTiempo()
 {
-    tiempojugado = 60 * 5;
+    tiempojugado = 60 * 30;
 }
 
 void GamePlay3::setInmunidad()

@@ -7,7 +7,7 @@ class Scores : public cScreen
 {
 private:
     sf::Font _font;
-    //sf::Text primero, segundo;
+    sf::Text primero, segundo;
     sf::Sprite _backgroundcred;
     sf::Texture _texturecred;
 

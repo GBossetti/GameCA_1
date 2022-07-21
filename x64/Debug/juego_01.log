@@ -1,4 +1,28 @@
-﻿  main.cpp
-  Scores.cpp
-  Generating Code...
-  juego_01.vcxproj -> C:\Users\Gonzalo\Documents\GitHub\GameCA\x64\Debug\juego_01.exe
+﻿  GamePlay1.cpp
+C:\Users\usuario\Documents\GitHub\GameCA_1\GamePlay1.cpp(130,43): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\usuario\Documents\GitHub\GameCA_1\GamePlay1.cpp(137,44): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\usuario\Documents\GitHub\GameCA_1\GamePlay1.cpp(146,23): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\usuario\Documents\GitHub\GameCA_1\GamePlay1.cpp(147,23): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\usuario\Documents\GitHub\GameCA_1\GamePlay1.cpp(153,47): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+          with
+          [
+              T=float
+          ]
+C:\Users\usuario\Documents\GitHub\GameCA_1\GamePlay1.cpp(154,46): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+          with
+          [
+              T=float
+          ]
+C:\Users\usuario\Documents\GitHub\GameCA_1\GamePlay1.cpp(155,45): warning C4244: 'argumento': conversión de 'int' a 'T'; posible pérdida de datos
+          with
+          [
+              T=float
+          ]
+  GamePlay2.cpp
+C:\Users\usuario\Documents\GitHub\GameCA_1\GamePlay2.cpp(140,43): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\usuario\Documents\GitHub\GameCA_1\GamePlay2.cpp(147,44): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+  GamePlay3.cpp
+C:\Users\usuario\Documents\GitHub\GameCA_1\GamePlay3.cpp(147,43): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\usuario\Documents\GitHub\GameCA_1\GamePlay3.cpp(154,44): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+  Generando código...
+  juego_01.vcxproj -> C:\Users\usuario\Documents\GitHub\GameCA_1\x64\Debug\juego_01.exe

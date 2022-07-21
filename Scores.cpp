@@ -39,8 +39,8 @@ int Scores::Run(sf::RenderWindow& window)
         window.clear();
 
         window.draw(_backgroundcred);
-        //window.draw(primero);
-        //window.draw(segundo);
+        window.draw(primero);
+        window.draw(segundo);
         window.display();
     }
 
@@ -59,33 +59,35 @@ void Scores::MostrarPuntajes()
     cargarVector(vPuntajes, cantReg);
     ordenarVector(vPuntajes, cantReg);
 
-    int cantRegMostrar = 2;
-    int punto1 = 0, punto2 = 0;
-
     for (int i = 0; i < cantReg; i++) {
         std::cout << vPuntajes[i].getPuntos() << std::endl;
     }
 
-    //for (int i = 0; i < cantRegMostrar; i++) {
-    //    if (punto1 == 0) {
-    //        punto1 = vPuntajes[i].getPuntos();
-    //    }
-    //    else {
-    //        if (punto2 == 0) {
-    //            punto2 = vPuntajes[i].getPuntos();
-    //        }
-    //    }
-    //}
+    int cantRegMostrar = 2;
+    int punto1=0, punto2=0;
+
+    for (int i = 0; i < cantRegMostrar; i++) {
+        if (punto1 == 0) {
+            punto1 = vPuntajes[i].getPuntos();
+            std::cout << "punto1" << punto1 << std::endl;
+        }
+        else {
+            if (punto2 == 0) {
+                punto2 = vPuntajes[i].getPuntos();
+                std::cout << "punto2" << punto2 << std::endl;
+            }
+        }
+    }
     
-    //primero.setFont(_font);
-    //primero.setPosition(300, 200);
-    //primero.setFillColor(sf::Color::White);
-    //primero.setString("PUNTOS: " + std::to_string(punto1));
-    //
-    //segundo.setFont(_font);
-    //segundo.setPosition(300, 250);
-    //segundo.setFillColor(sf::Color::White);
-    //segundo.setString("PUNTOS: " + std::to_string(punto2));
+    primero.setFont(_font);
+    primero.setPosition(250, 200);
+    primero.setFillColor(sf::Color::White);
+    primero.setString("MEJOR PUNTAJE 1: " + std::to_string(punto1));
+    
+    segundo.setFont(_font);
+    segundo.setPosition(250, 250);
+    segundo.setFillColor(sf::Color::White);
+    segundo.setString("MEJOR PUNTAJE 2: " + std::to_string(punto2));
 
 
     delete vPuntajes;
@@ -96,7 +98,6 @@ void cargarVector(Archivo* v, int cant) {
 
     for (int i = 0; i < cant; i++) {
         reg.LeerDeDisco(i);
-        v[i].setNombre(reg.getNombre());
         v[i].setPuntos(reg.getPuntos());
     }
 }
@@ -105,7 +106,7 @@ void ordenarVector(Archivo* v, int cant) {
     Archivo aux;
     for (int i = 0; i < cant - 1; i++) {
         for (int j = i + 1; j < cant; j++) {
-            if (v[i].getPuntos() > v[j].getPuntos()) {
+            if (v[i].getPuntos() < v[j].getPuntos()) {
                 aux = v[i];
                 v[i] = v[j];
                 v[j] = aux;

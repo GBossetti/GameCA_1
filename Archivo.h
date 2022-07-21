@@ -1,12 +1,10 @@
 #pragma once
 #include <cstdio>
-#include <cstring>
 
 class Archivo
 {
 private:
 	int _puntos;
-	char _nombre[50];
 
 public:
 
@@ -15,9 +13,6 @@ public:
 	int ContarRegistros();
 
 	void setPuntos(int p);
-	void setNombre(const char* n);
-
 	int getPuntos();
-	const char* getNombre();
 };
 

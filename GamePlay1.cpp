@@ -4,8 +4,8 @@
 
 GamePlay1::GamePlay1()
 {
-    vidas = 1;
-    tiempojugado = 60 * 5;
+    vidas = 3;
+    tiempojugado = 60 * 30;
     points = 0;
     time_inmunidad = 0;
     juego_pausa = false;
@@ -249,7 +249,7 @@ bool GamePlay1::getEscape()
 
 void GamePlay1::setVidas()
 {
-    vidas = 1;
+    vidas = 3;
 }
 
 int GamePlay1::getVidas()
@@ -288,6 +288,7 @@ void GamePlay1::setValorInicial()
     setGameOver();
     setCambiaNivel();
     setEscape();
+    repartidor.setInmunidad(false);
 
 }
 
@@ -298,7 +299,7 @@ void GamePlay1::setLlegada()
 
 void GamePlay1::setTiempo()
 {
-    tiempojugado = 60 * 5;
+    tiempojugado = 60 * 30;
 }
 
 void GamePlay1::setInmunidad()

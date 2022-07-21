@@ -61,8 +61,6 @@ int GameScene::Run(sf::RenderWindow& window)
 
         setPuntos(gp3.getPuntos()); 
 
-        std::cout << "Puntos" << _puntaje << std::endl;
-
         Grabar();
 
         gp1.setValorInicial();
@@ -89,6 +87,7 @@ void GameScene::setPuntos(int puntos)
 void GameScene::Grabar()
 {
     Archivo aux;
+    std::cout << "Variable: " << _puntaje;
     aux.setPuntos(_puntaje);
     aux.GrabarEnDisco();
 }
