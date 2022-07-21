@@ -126,7 +126,7 @@ void GamePlay3::juego()
         if (repartidor.getInmunidad()) {
             time_inmunidad++;
         }
-        if (repartidor.getInmunidad() && time_inmunidad == 60 * 5) {
+        if (repartidor.getInmunidad() && time_inmunidad == 60 * 2) {
             repartidor.setInmunidad(false);
         }
         if (repartidor.isCollision(carpincho)) {
@@ -193,6 +193,12 @@ void GamePlay3::setTextos()
 
     text_pausa.setPosition(250, 300);
     text_pausa.setString("PAUSA");
+<<<<<<< Updated upstream:gp3.cpp
+=======
+    
+    text_final.setPosition(200, 200);
+    text_final.setString("JUEGO TERMINADO");
+>>>>>>> Stashed changes:GamePlay3.cpp
 }
 
 void GamePlay3::pausa()
@@ -228,4 +234,28 @@ int GamePlay3::getPuntos()
     return points;
 }
 
+<<<<<<< Updated upstream:gp3.cpp
+=======
+bool GamePlay3::getCambiaNivel()
+{
+    return cambia_nivel;
+}
+
+void GamePlay3::setCambiaNivel()
+{
+    cambia_nivel = false;
+}
+
+void GamePlay3::setValorInicial()
+{
+    setLlegada();
+    setTiempo();
+    barrera.setPosicionIni();
+    setInmunidad();
+    setGameOver();
+    setCambiaNivel();
+    setEscape();
+    repartidor.setInmunidad(false);
+}
+>>>>>>> Stashed changes:GamePlay3.cpp
 
