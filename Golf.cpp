@@ -3,7 +3,7 @@
 Golf::Golf()
 {
 	_body.setSize(sf::Vector2f(50, 100));
-	_textura.loadFromFile("carpincho.png");
+	_textura.loadFromFile("pelotagolf.png");
 	_sprite.setTextureRect({ 0,0, (int)_textura.getSize().x, (int)_textura.getSize().y });
 	_sprite.setOrigin(_sprite.getGlobalBounds().width / 2, _sprite.getGlobalBounds().height / 2);
 
